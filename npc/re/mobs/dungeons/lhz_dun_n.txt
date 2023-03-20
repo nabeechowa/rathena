@@ -1,0 +1,54 @@
+//===== rAthena Script =======================================
+//= Nightmare Biolabs
+//===== Description: =========================================
+//= Nightmare Biolabs Monster Spawn Script.
+//===== Additional Comments: =================================
+//= 1.0 First version. Boss and slaves spawn are assumptions
+//		based on lhz_dun.txt monsters spawn. [Capuche]
+//= 1.1 Changed MvP spawn based on the amount of
+//		monsters killed. [Capuche]
+//============================================================
+
+-	script	spawn_lab5boss	-1,{
+OnInit:
+	setarray .mob_ID, 3220, 3221, 3222, 3223, 3224, 3225, 3240, 3241, 3242, 3243, 3244, 3245, 3246; // add more mob id
+	setarray .map_event$, "lhz_dun_n"; // yours woe map
+	.size_mob = getarraysize( .mob_ID );
+	.size_map = getarraysize( .map_event$ );
+	end;
+
+OnMinute33:
+	.@r = rand( .size_mob );
+	.@m = rand( .size_map );
+	monster .map_event$[.@m],0,0,"--ja--", .mob_ID[.@r],1,"";
+	announce "ในแลป 5 บอส "+ strmobinfo( 1,.mob_ID[.@r] ) +" เกิดแล้ว ไปตาม หาดู !",0;
+	end;
+	
+//OnNPCKillEvent:
+//	while(1) {
+//	if ( strcharinfo(3) == instance_mapname("lhz_dun_n") ) end;
+//		if ( getcharid(1) ) {
+//		announce "บอสแลป5 ถูกฆ่าโดย ["+ strcharinfo(0) +"] แล้ว "+ getmonsterinfo( killedrid,.mob_ID ) +"", bc_all;
+//		}
+//	end;
+//	}
+	
+//OnMvpDead:
+//	announce "", strcharinfo(0) +"ในแลป 5 บอส ตายแล้ว",0;
+//	end;
+}
+
+lhz_dun_n,0,0	monster	Eremes Guille	3208,20,5000,0
+lhz_dun_n,0,0	monster	Magaleta Sorin	3209,15,5000,0
+lhz_dun_n,0,0	monster	Catherine Cheiron	3210,15,5000,0
+lhz_dun_n,0,0	monster	Shecil Damon	3211,20,5000,0
+lhz_dun_n,0,0	monster	Harword Alt-Eisen	3212,15,5000,0
+lhz_dun_n,0,0	monster	Seyren Windsor	3213,15,5000,0
+
+lhz_dun_n,0,0	monster	Randel Lawrence	3226,15,5000,0
+lhz_dun_n,0,0	monster	Flamel Emule	3227,15,5000,0
+lhz_dun_n,0,0	monster	Celia Alde	3228,15,5000,0
+lhz_dun_n,0,0	monster	Chen Liu	3229,15,5000,0
+lhz_dun_n,0,0	monster	Gertie Wie	3230,15,5000,0
+lhz_dun_n,0,0	monster	Alphoccio Basil	3231,10,5000,0
+lhz_dun_n,0,0	monster	Trentini	3232,15,5000,0
