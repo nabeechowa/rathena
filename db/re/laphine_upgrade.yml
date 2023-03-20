@@ -27,6 +27,10 @@
 #   ResultRefine               Absolute refine level after the upgrade. (Default: none)
 #   ResultRefineMinimum        Minimum refine level after the upgrade. (Default: none)
 #   ResultRefineMaximum        Maximum refine level after the upgrade. (Default: none)
+#   ResultRefineRate:          Table of rate per refine level. (Default: none)
+#                              By default the rate per level is 1. When defined the total rate is the sum of the rates between the minimum and maximum refinements.
+#     - Level                  Refine level.
+#       Rate                   Rate per level. (Default: 1. Max: 10000)
 #   MinimumRefine              Minimum refine level of the required items. (Default: 0)
 #   MaximumRefine              Maximum refine level of the required items. (Default: MAX_REFINE)
 #   RequiredRandomOptions      How many random options have to be in the item? (Default: 0)
@@ -40,26 +44,27 @@ Header:
   Version: 1
 
 Body:
-#  - Item: Ein_Ddbox
-#    TargetItems:
-#      - Item: Ein_BHSWORD
-#      - Item: Detecting_Staff
-#      - Item: Ein_BHHuuma
-#      - Item: Ein_BHKATAR
-#      - Item: Ein_BHAXE
-#      - Item: Ein_BHBOW
-#      - Item: Ein_1HKNUCK
-#      - Item: Ein_1HHAMMER
-#      - Item: Ein_1HWAND
-#      - Item: Ein_1HWHIP
-#      - Item: Ein_1HBOOK
-#      - Item: Ein_1HDAGGER
-#      - Item: Ein_1HMAGGER
-#      - Item: Ein_1HSPEAR
-#      - Item: Ein_1HLUTE
-#      - Item: Ein_1HSWORD
-#      - Item: Ein_1HGUN
-#      - Item: Ein_1H_Foxtail
+  - Item: Ein_Ddbox
+    RandomOptionGroup: EIN_DDBOX
+    TargetItems:
+      - Item: Ein_BHSWORD
+      - Item: Ein_BHSTAFF
+      - Item: Ein_BHHuuma
+      - Item: Ein_BHKATAR
+      - Item: Ein_BHAXE
+      - Item: Ein_BHBOW
+      - Item: Ein_1HKNUCK
+      - Item: Ein_1HHAMMER
+      - Item: Ein_1HWAND
+      - Item: Ein_1HWHIP
+      - Item: Ein_1HBOOK
+      - Item: Ein_1HDAGGER
+      - Item: Ein_1HMAGGER
+      - Item: Ein_1HSPEAR
+      - Item: Ein_1HLUTE
+      - Item: Ein_1HSWORD
+      - Item: Ein_1HGUN
+      - Item: Ein_1H_Foxtail
   - Item: Metal_Rifine_Ticket
     ResultRefine: 7
     CardsAllowed: true
@@ -76,26 +81,27 @@ Body:
       - Item: Metal_Revolver
       - Item: Metal_Huuma_Shuriken
       - Item: Metal_Foxtail
-#  - Item: Ein_Ddbox2
-#    TargetItems:
-#      - Item: Ein_BHSWORD
-#      - Item: Detecting_Staff
-#      - Item: Ein_BHHuuma
-#      - Item: Ein_BHKATAR
-#      - Item: Ein_BHAXE
-#      - Item: Ein_BHBOW
-#      - Item: Ein_1HKNUCK
-#      - Item: Ein_1HHAMMER
-#      - Item: Ein_1HWAND
-#      - Item: Ein_1HWHIP
-#      - Item: Ein_1HBOOK
-#      - Item: Ein_1HDAGGER
-#      - Item: Ein_1HMAGGER
-#      - Item: Ein_1HSPEAR
-#      - Item: Ein_1HLUTE
-#      - Item: Ein_1HSWORD
-#      - Item: Ein_1HGUN
-#      - Item: Ein_1H_Foxtail
+  - Item: Ein_Ddbox2
+    RandomOptionGroup: EIN_DDBOX2
+    TargetItems:
+      - Item: Ein_BHSWORD
+      - Item: Ein_BHSTAFF
+      - Item: Ein_BHHuuma
+      - Item: Ein_BHKATAR
+      - Item: Ein_BHAXE
+      - Item: Ein_BHBOW
+      - Item: Ein_1HKNUCK
+      - Item: Ein_1HHAMMER
+      - Item: Ein_1HWAND
+      - Item: Ein_1HWHIP
+      - Item: Ein_1HBOOK
+      - Item: Ein_1HDAGGER
+      - Item: Ein_1HMAGGER
+      - Item: Ein_1HSPEAR
+      - Item: Ein_1HLUTE
+      - Item: Ein_1HSWORD
+      - Item: Ein_1HGUN
+      - Item: Ein_1H_Foxtail
   - Item: Gemstone_Of_Time
     RandomOptionGroup: GEMSTONE_OF_TIME
     TargetItems:
@@ -152,6 +158,27 @@ Body:
   - Item: Shadow_Refine_Hammer
     ResultRefineMinimum: 1
     ResultRefineMaximum: 10
+    ResultRefineRate:
+      - Level: 1
+        Rate: 440
+      - Level: 2
+        Rate: 879
+      - Level: 3
+        Rate: 1703
+      - Level: 4
+        Rate: 3516
+      - Level: 5
+        Rate: 1758
+      - Level: 6
+        Rate: 879
+      - Level: 7
+        Rate: 440
+      - Level: 8
+        Rate: 220
+      - Level: 9
+        Rate: 110
+      - Level: 10
+        Rate: 55
     MaximumRefine: 9
     CardsAllowed: true
     TargetItems:
@@ -959,7 +986,7 @@ Body:
   - Item: Shadow_Random_Mix
     RandomOptionGroup: SHADOW_RANDOM_MIX
     MinimumRefine: 7
-    MaximumRefine: 10
+    MaximumRefine: 99
     TargetItems:
       - Item: T1_Shadow_Armor
       - Item: T1_Shadow_Weapon
@@ -2397,14 +2424,15 @@ Body:
       - Item: S_R_Bearers_Earring
       - Item: S_Mega_Blitz_Shield
       - Item: S_Mega_Blitz_Weapon
-#  - Item: Abyss_Ddbox
-#    TargetItems:
-#      - Item: DragonA_Red
-#      - Item: DragonA_Green
-#      - Item: DragonA_Gold
-#      - Item: DragonA_Purple
-#      - Item: DragonA_Blue
-#      - Item: DragonA_Silver
+  - Item: Abyss_Ddbox
+    RandomOptionGroup: ABYSS_DDBOX
+    TargetItems:
+      - Item: DragonA_Red
+      - Item: DragonA_Green
+      - Item: DragonA_Gold
+      - Item: DragonA_Purple
+      - Item: DragonA_Blue
+      - Item: DragonA_Silver
   - Item: ILL_Piece_A
     RandomOptionGroup: ILL_PIECE_A
     TargetItems:
@@ -3042,20 +3070,23 @@ Body:
       - Item: Grace_Tiger_Suit
       - Item: Grace_Snovice_Suit
       - Item: Grace_Snovice_Robe
-#  - Item: Abyss_Ddbox2
-#    TargetItems:
-#      - Item: DragonA_Red
-#      - Item: DragonA_Green
-#      - Item: DragonA_Gold
-#      - Item: DragonA_Purple
-#      - Item: DragonA_Blue
-#      - Item: DragonA_Silver
-#  - Item: Abyss_Ddbox3
-#    TargetItems:
-#      - Item: Drag_Manteau
-#  - Item: Abyss_Ddbox4
-#    TargetItems:
-#      - Item: Dragon_Boots
+  - Item: Abyss_Ddbox2
+    RandomOptionGroup: ABYSS_DDBOX2
+    TargetItems:
+      - Item: DragonA_Red
+      - Item: DragonA_Green
+      - Item: DragonA_Gold
+      - Item: DragonA_Purple
+      - Item: DragonA_Blue
+      - Item: DragonA_Silver
+  - Item: Abyss_Ddbox3
+    RandomOptionGroup: ABYSS_DDBOX3
+    TargetItems:
+      - Item: Drag_Manteau
+  - Item: Abyss_Ddbox4
+    RandomOptionGroup: ABYSS_DDBOX4
+    TargetItems:
+      - Item: Dragon_Boots
 #  - Item: Auto_Imp_Melee_1
 #    TargetItems:
 #      - Item: Ep172_1h_Sword
@@ -3224,6 +3255,194 @@ Body:
 #      - Item: Ep172_1h_Shotgun
 #      - Item: Ep172_1h_Gatling
 #      - Item: Ep172_1h_Grenade
+#  - Item: Abyss_Ddbox2
+#    TargetItems:
+#      - Item: DragonA_Red
+#      - Item: DragonA_Green
+#      - Item: DragonA_Gold
+#      - Item: DragonA_Purple
+#      - Item: DragonA_Blue
+#      - Item: DragonA_Silver
+#  - Item: Abyss_Ddbox3
+#    TargetItems:
+#      - Item: Drag_Manteau
+#  - Item: Abyss_Ddbox4
+#    TargetItems:
+#      - Item: Dragon_Boots
+  - Item: Auto_Imp_Melee_1
+    RandomOptionGroup: AUTO_IMP_MELEE_1
+    TargetItems:
+      - Item: Ep172_1h_Sword
+      - Item: Ep172_Bh_Sword
+      - Item: Ep172_1h_Wand
+      - Item: Ep172_1h_Book
+      - Item: Ep172_1h_Axe
+      - Item: Ep172_1h_Sword2
+      - Item: Ep172_Bh_Bow
+      - Item: Ep172_Bh_Bow2
+      - Item: Ep172_Bh_Knuck
+      - Item: Ep172_1h_Spear
+      - Item: Ep172_Bh_Spear
+      - Item: Ep172_1h_Dagger
+      - Item: Ep172_Bh_Katar
+      - Item: Ep172_Bh_Staff
+      - Item: Ep172_1h_Book2
+      - Item: Ep172_1h_Dagger2
+      - Item: Ep172_1h_Whip
+      - Item: Ep172_1h_Inst
+      - Item: Ep172_Bh_Bow3
+      - Item: Ep172_Bh_Huuma
+      - Item: Ep172_1h_Hammer
+      - Item: Ep172_1h_Foxtail
+      - Item: Ep172_1h_Rifle
+      - Item: Ep172_1h_Shotgun
+      - Item: Ep172_1h_Gatling
+      - Item: Ep172_1h_Grenade
+  - Item: Auto_Imp_Melee_2
+    RandomOptionGroup: AUTO_IMP_MELEE_2
+    TargetItems:
+      - Item: Ep172_1h_Sword
+      - Item: Ep172_Bh_Sword
+      - Item: Ep172_1h_Wand
+      - Item: Ep172_1h_Book
+      - Item: Ep172_1h_Axe
+      - Item: Ep172_1h_Sword2
+      - Item: Ep172_Bh_Bow
+      - Item: Ep172_Bh_Bow2
+      - Item: Ep172_Bh_Knuck
+      - Item: Ep172_1h_Spear
+      - Item: Ep172_Bh_Spear
+      - Item: Ep172_1h_Dagger
+      - Item: Ep172_Bh_Katar
+      - Item: Ep172_Bh_Staff
+      - Item: Ep172_1h_Book2
+      - Item: Ep172_1h_Dagger2
+      - Item: Ep172_1h_Whip
+      - Item: Ep172_1h_Inst
+      - Item: Ep172_Bh_Bow3
+      - Item: Ep172_Bh_Huuma
+      - Item: Ep172_1h_Hammer
+      - Item: Ep172_1h_Foxtail
+      - Item: Ep172_1h_Rifle
+      - Item: Ep172_1h_Shotgun
+      - Item: Ep172_1h_Gatling
+      - Item: Ep172_1h_Grenade
+  - Item: Auto_Imp_Melee_3
+    RandomOptionGroup: AUTO_IMP_MELEE_3
+    TargetItems:
+      - Item: Ep172_1h_Sword
+      - Item: Ep172_Bh_Sword
+      - Item: Ep172_1h_Wand
+      - Item: Ep172_1h_Book
+      - Item: Ep172_1h_Axe
+      - Item: Ep172_1h_Sword2
+      - Item: Ep172_Bh_Bow
+      - Item: Ep172_Bh_Bow2
+      - Item: Ep172_Bh_Knuck
+      - Item: Ep172_1h_Spear
+      - Item: Ep172_Bh_Spear
+      - Item: Ep172_1h_Dagger
+      - Item: Ep172_Bh_Katar
+      - Item: Ep172_Bh_Staff
+      - Item: Ep172_1h_Book2
+      - Item: Ep172_1h_Dagger2
+      - Item: Ep172_1h_Whip
+      - Item: Ep172_1h_Inst
+      - Item: Ep172_Bh_Bow3
+      - Item: Ep172_Bh_Huuma
+      - Item: Ep172_1h_Hammer
+      - Item: Ep172_1h_Foxtail
+      - Item: Ep172_1h_Rifle
+      - Item: Ep172_1h_Shotgun
+      - Item: Ep172_1h_Gatling
+      - Item: Ep172_1h_Grenade
+  - Item: Auto_Imp_Magic_1
+    RandomOptionGroup: AUTO_IMP_MAGIC_1
+    TargetItems:
+      - Item: Ep172_1h_Sword
+      - Item: Ep172_Bh_Sword
+      - Item: Ep172_1h_Wand
+      - Item: Ep172_1h_Book
+      - Item: Ep172_1h_Axe
+      - Item: Ep172_1h_Sword2
+      - Item: Ep172_Bh_Bow
+      - Item: Ep172_Bh_Bow2
+      - Item: Ep172_Bh_Knuck
+      - Item: Ep172_1h_Spear
+      - Item: Ep172_Bh_Spear
+      - Item: Ep172_1h_Dagger
+      - Item: Ep172_Bh_Katar
+      - Item: Ep172_Bh_Staff
+      - Item: Ep172_1h_Book2
+      - Item: Ep172_1h_Dagger2
+      - Item: Ep172_1h_Whip
+      - Item: Ep172_1h_Inst
+      - Item: Ep172_Bh_Bow3
+      - Item: Ep172_Bh_Huuma
+      - Item: Ep172_1h_Hammer
+      - Item: Ep172_1h_Foxtail
+      - Item: Ep172_1h_Rifle
+      - Item: Ep172_1h_Shotgun
+      - Item: Ep172_1h_Gatling
+      - Item: Ep172_1h_Grenade
+  - Item: Auto_Imp_Magic_2
+    RandomOptionGroup: AUTO_IMP_MAGIC_2
+    TargetItems:
+      - Item: Ep172_1h_Sword
+      - Item: Ep172_Bh_Sword
+      - Item: Ep172_1h_Wand
+      - Item: Ep172_1h_Book
+      - Item: Ep172_1h_Axe
+      - Item: Ep172_1h_Sword2
+      - Item: Ep172_Bh_Bow
+      - Item: Ep172_Bh_Bow2
+      - Item: Ep172_Bh_Knuck
+      - Item: Ep172_1h_Spear
+      - Item: Ep172_Bh_Spear
+      - Item: Ep172_1h_Dagger
+      - Item: Ep172_Bh_Katar
+      - Item: Ep172_Bh_Staff
+      - Item: Ep172_1h_Book2
+      - Item: Ep172_1h_Dagger2
+      - Item: Ep172_1h_Whip
+      - Item: Ep172_1h_Inst
+      - Item: Ep172_Bh_Bow3
+      - Item: Ep172_Bh_Huuma
+      - Item: Ep172_1h_Hammer
+      - Item: Ep172_1h_Foxtail
+      - Item: Ep172_1h_Rifle
+      - Item: Ep172_1h_Shotgun
+      - Item: Ep172_1h_Gatling
+      - Item: Ep172_1h_Grenade
+  - Item: Auto_Imp_Magic_3
+    RandomOptionGroup: AUTO_IMP_MAGIC_3
+    TargetItems:
+      - Item: Ep172_1h_Sword
+      - Item: Ep172_Bh_Sword
+      - Item: Ep172_1h_Wand
+      - Item: Ep172_1h_Book
+      - Item: Ep172_1h_Axe
+      - Item: Ep172_1h_Sword2
+      - Item: Ep172_Bh_Bow
+      - Item: Ep172_Bh_Bow2
+      - Item: Ep172_Bh_Knuck
+      - Item: Ep172_1h_Spear
+      - Item: Ep172_Bh_Spear
+      - Item: Ep172_1h_Dagger
+      - Item: Ep172_Bh_Katar
+      - Item: Ep172_Bh_Staff
+      - Item: Ep172_1h_Book2
+      - Item: Ep172_1h_Dagger2
+      - Item: Ep172_1h_Whip
+      - Item: Ep172_1h_Inst
+      - Item: Ep172_Bh_Bow3
+      - Item: Ep172_Bh_Huuma
+      - Item: Ep172_1h_Hammer
+      - Item: Ep172_1h_Foxtail
+      - Item: Ep172_1h_Rifle
+      - Item: Ep172_1h_Shotgun
+      - Item: Ep172_1h_Gatling
+      - Item: Ep172_1h_Grenade
 #  - Item: Class_Sha_R_M_Melee
 #    TargetItems:
 #      - Item: S_Swordman_earring
@@ -4460,8 +4679,8 @@ Body:
       - Item: Saint_Robe_IL
       - Item: Water_Sprits_Armor_IL
       - Item: Chain_Mail_IL
-      - Item: Morrigane's_Helm_IL
-      - Item: Morrigane's_Manteau_IL
+      - Item: Morrigane_Helm_IL
+      - Item: Morrigane_Manyeau_IL
   - Item: S_Underwater_Box_IL
     ResultRefineMinimum: 9
     ResultRefineMaximum: 12
@@ -4478,8 +4697,8 @@ Body:
       - Item: Saint_Robe_IL
       - Item: Water_Sprits_Armor_IL
       - Item: Chain_Mail_IL
-      - Item: Morrigane's_Helm_IL
-      - Item: Morrigane's_Manteau_IL
+      - Item: Morrigane_Helm_IL
+      - Item: Morrigane_Manyeau_IL
   - Item: Circlet_Refine_Cube
     ResultRefine: 11
     MaximumRefine: 10

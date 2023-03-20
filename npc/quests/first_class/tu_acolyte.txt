@@ -1759,33 +1759,3 @@ prt_monk,223,123,3	script	Eavesdrop#tu	HIDDEN_NPC,{
 	}
 	close;
 }
-
-sec_in02,17,156,3	script	1st Job Quest Reset	4_F_JOB_BLACKSMITH,{
-	callfunc "F_GM_NPC";
-	mes "[1st Job Quest]";
-	mes "Which would you like to reset?";
-	next;
-	switch(select("Swordsman:Merchant:Archer:Acolyte:Thief:Mage")) {
-	case 1:
-		tu_swordman = 0;
-		break;
-	case 2:
-		tu_merchant = 0;
-		break;
-	case 3:
-		tu_archer01 = 0;
-		tu_archer02 = 0;
-		break;
-	case 4:
-		tu_acolyte01 = 0;
-		break;
-	case 5:
-		tu_thief01 = 0;
-		break;
-	case 6:
-		tu_magician01 = 0;
-		break;
-	}
-	mes "Completed.";
-	close;
-}

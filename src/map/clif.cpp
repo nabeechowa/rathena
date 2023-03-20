@@ -117,7 +117,7 @@ static inline int itemtype(t_itemid nameid) {
 		else
 			return IT_ARMOR;
 	}
-	return ( type == IT_PETEGG ) ? IT_ARMOR : type;
+	return ( type == IT_PETEGG ) ? IT_ARMOR : (type == IT_CHARM) ? IT_ETC : type;
 }
 
 // TODO: doc
@@ -926,8 +926,6 @@ void clif_dropflooritem( struct flooritem_data* fitem, bool canShowEffect ){
 #endif
 	clif_send( &p, sizeof(p), &fitem->bl, AREA );
 }
-
-
 
 /// Makes an item disappear from the ground.
 /// 00a1 <id>.L (ZC_ITEM_DISAPPEAR)
@@ -7128,6 +7126,7 @@ void clif_use_card(map_session_data *sd,int idx)
 		return; //Avoid parsing invalid item indexes (no card/no item)
 
 	ep=sd->inventory_data[idx]->equip;
+	bool is_enchantment = sd->inventory_data[idx]->equip == 0;
 	WFIFOHEAD(fd,MAX_INVENTORY * 2 + 4);
 	WFIFOW(fd,0)=0x17b;
 
@@ -7136,7 +7135,9 @@ void clif_use_card(map_session_data *sd,int idx)
 
 		if(sd->inventory_data[i] == NULL)
 			continue;
-		if(sd->inventory_data[i]->type!=IT_WEAPON && sd->inventory_data[i]->type!=IT_ARMOR)
+		if(!is_enchantment && sd->inventory_data[i]->type!=IT_WEAPON && sd->inventory_data[i]->type!=IT_ARMOR)
+			continue;
+		if(is_enchantment && sd->inventory_data[i]->type!=IT_WEAPON && sd->inventory_data[i]->type!=IT_ARMOR && sd->inventory_data[i]->type!=IT_SHADOWGEAR)
 			continue;
 		if(itemdb_isspecial(sd->inventory.u.items_inventory[i].card[0])) //Can't slot it
 			continue;
@@ -7144,7 +7145,7 @@ void clif_use_card(map_session_data *sd,int idx)
 		if(sd->inventory.u.items_inventory[i].identify==0 )	//Not identified
 			continue;
 
-		if((sd->inventory_data[i]->equip&ep)==0)	//Not equippable on this part.
+		if(!is_enchantment && (sd->inventory_data[i]->equip&ep)==0)	//Not equippable on this part.
 			continue;
 
 		if(sd->inventory_data[i]->type==IT_WEAPON && ep==EQP_SHIELD) //Shield card won't go on left weapon.
@@ -7153,9 +7154,16 @@ void clif_use_card(map_session_data *sd,int idx)
 		if(sd->inventory_data[i]->type == IT_ARMOR && (ep & EQP_ACC) && ((ep & EQP_ACC) != EQP_ACC) && ((sd->inventory_data[i]->equip & EQP_ACC) != (ep & EQP_ACC)) ) // specific accessory-card can only be inserted to specific accessory.
 			continue;
 
-		ARR_FIND( 0, sd->inventory_data[i]->slots, j, sd->inventory.u.items_inventory[i].card[j] == 0 );
-		if( j == sd->inventory_data[i]->slots )	// No room
-			continue;
+		if (is_enchantment) {
+			ARR_FIND(sd->inventory_data[i]->slots, 4, j, sd->inventory.u.items_inventory[i].card[j] == 0);
+			if (j == 4)	// No room
+				continue;
+		}
+		else {
+			ARR_FIND(0, sd->inventory_data[i]->slots, j, sd->inventory.u.items_inventory[i].card[j] == 0);
+			if (j == sd->inventory_data[i]->slots)	// No room
+				continue;
+		}
 
 		if( sd->inventory.u.items_inventory[i].equip > 0 )	// Do not check items that are already equipped
 			continue;
@@ -11112,10 +11120,10 @@ void clif_parse_LoadEndAck(int fd,map_session_data *sd)
 			guild_notice = false; // Do not display it twice
 		}
 
-		if (battle_config.bg_flee_penalty != 100 || battle_config.gvg_flee_penalty != 100) {
+		if (battle_config.bg_flee_penalty != 100 || battle_config.gvg_flee_penalty != 100 || battle_config.tb_flee_penalty != 100 || battle_config.tb2_flee_penalty != 100 || battle_config.tb3_flee_penalty != 100 || battle_config.tb4_flee_penalty != 100) {
 			struct map_data *pmap = map_getmapdata(sd->state.pmap);
 
-			if ((pmap != nullptr && (mapdata_flag_gvg(pmap) || pmap->flag[MF_BATTLEGROUND])) || (mapdata != nullptr && (mapdata_flag_gvg(mapdata) || mapdata->flag[MF_BATTLEGROUND])))
+			if ((pmap != nullptr && (mapdata_flag_gvg(pmap) || pmap->flag[MF_BATTLEGROUND])) || (mapdata != nullptr && (mapdata_flag_gvg(mapdata) || mapdata->flag[MF_BATTLEGROUND] || mapdata->flag[MF_TB] || mapdata->flag[MF_TB2] || mapdata->flag[MF_TB3] || mapdata->flag[MF_TB4])))
 				status_calc_bl(&sd->bl, { SCB_FLEE }); //Refresh flee penalty
 		}
 
@@ -11172,6 +11180,9 @@ void clif_parse_LoadEndAck(int fd,map_session_data *sd)
 			channel_mjoin(sd); //join new map
 
 		clif_pk_mode_message(sd);
+
+		// Update the client
+		clif_goldpc_info( *sd );
 	}
 	
 	if( sd->guild && ( battle_config.guild_notice_changemap == 2 || guild_notice ) ){
@@ -25137,6 +25148,70 @@ void clif_parse_partybooking_reply( int fd, map_session_data* sd ){
 	}
 
 	clif_partybooking_reply( tsd, sd, p->accept );
+#endif
+}
+
+void clif_goldpc_info( map_session_data& sd ){
+#if PACKETVER_MAIN_NUM >= 20140508 || PACKETVER_RE_NUM >= 20140508 || defined(PACKETVER_ZERO)
+	const static int32 client_max_seconds = 3600;
+
+	if( battle_config.feature_goldpc_active ){
+		struct PACKET_ZC_GOLDPCCAFE_POINT p = {};
+
+		p.packetType = HEADER_ZC_GOLDPCCAFE_POINT;
+		p.active = true;
+		if( battle_config.feature_goldpc_vip && pc_isvip( &sd ) ){
+			p.unitPoint = 2;
+		}else{
+			p.unitPoint = 1;
+		}
+		p.point = (int32)pc_readparam( &sd, SP_GOLDPC_POINTS );
+		if( sd.goldpc_tid != INVALID_TIMER ){
+			const struct TimerData* td = get_timer( sd.goldpc_tid );
+
+			if( td != nullptr ){
+				// Get the remaining milliseconds until the next reward
+				t_tick remaining = td->tick - gettick();
+
+				// Always round up to full second
+				remaining += ( remaining % 1000 );
+
+				p.accumulatePlaySecond = (int32)( client_max_seconds - ( remaining / 1000 ) );
+			}else{
+				p.accumulatePlaySecond = 0;
+			}
+		}else{
+			p.accumulatePlaySecond = client_max_seconds;
+		}
+
+		clif_send( &p, sizeof( p ), &sd.bl, SELF );
+	}
+#endif
+}
+
+void clif_parse_dynamic_npc( int fd, map_session_data* sd ){
+#if PACKETVER_MAIN_NUM >= 20140430 || PACKETVER_RE_NUM >= 20140430 || defined(PACKETVER_ZERO)
+	struct PACKET_CZ_DYNAMICNPC_CREATE_REQUEST* p = (struct PACKET_CZ_DYNAMICNPC_CREATE_REQUEST*)RFIFOP( fd, 0 );
+
+	char npcname[NPC_NAME_LENGTH + 1];
+
+	if( strncasecmp( "GOLDPCCAFE", p->nickname, sizeof( p->nickname ) ) == 0 ){
+		safestrncpy( npcname, p->nickname, sizeof( npcname ) );
+	}else{
+		return;
+	}
+
+	struct npc_data* nd = npc_name2id( npcname );
+
+	if( nd == nullptr ){
+		ShowError( "clif_parse_dynamic_npc: Original NPC \"%s\" was not found.\n", npcname );
+		clif_dynamicnpc_result( *sd, DYNAMICNPC_RESULT_UNKNOWNNPC );
+		return;
+	}
+
+	if( npc_duplicate_npc_for_player( *nd, *sd ) != nullptr ){
+		clif_dynamicnpc_result( *sd, DYNAMICNPC_RESULT_SUCCESS );
+	}
 #endif
 }
 

@@ -1165,7 +1165,7 @@ int mob_spawn (struct mob_data *md)
 	md->last_linktime = tick;
 	md->dmgtick = tick - 5000;
 	md->last_pcneartime = 0;
-
+	md->dynamic = (int)(1 + (rnd() % battle_config.max_monster_dynamic));
 	t_tick c = tick - MOB_MAX_DELAY;
 
 	for (i = 0; i < MAX_MOBSKILL; i++)
@@ -2877,6 +2877,29 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				}
 			}
 
+			// THE BOX KEY [Start]
+			if(battle_config.item_from_mobs && md->level) {
+			drop_rate = mob_getdroprate(src, md->db, cap_value(battle_config.item_rate_the_box_key * (rnd() % md->level), 0, 10000), drop_modifier);
+			if (rnd() % 10000 < drop_rate)
+			{
+				struct s_mob_drop mobdrop = {};
+				mobdrop.nameid = battle_config.item_1;
+
+				mob_item_drop(md, dlist, mob_setdropitem(&mobdrop, 1, md->mob_id), 0, drop_rate, homkillonly || merckillonly);
+			}
+			// MvP Refine [Start]
+			if (md->db->mexp > 0) {
+				drop_rate = mob_getdroprate(src, md->db, cap_value(battle_config.item_rate_mvp_refine * (rnd() % (md->level / 9)), 0, 10000), drop_modifier);
+				if (rnd() % 10000 < drop_rate)
+				{
+					struct s_mob_drop mobdrop = {};
+					mobdrop.nameid = battle_config.item_2;
+
+					mob_item_drop(md, dlist, mob_setdropitem(&mobdrop, 1, md->mob_id), 0, drop_rate, homkillonly || merckillonly);
+				}
+			}
+		}
+
 			// process script-granted zeny bonus (get_zeny_num) [Skotlex]
 			if( sd->bonus.get_zeny_num && rnd()%100 < sd->bonus.get_zeny_rate ) {
 				i = sd->bonus.get_zeny_num > 0 ? sd->bonus.get_zeny_num : -md->level * sd->bonus.get_zeny_num;
@@ -3017,6 +3040,9 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 				if (temp != 10000) {
 					if(temp <= 0 && !battle_config.drop_rate0item)
 						temp = 1;
+
+					temp = mob_getdroprate(src, md->db, temp, 100); // MvP Drop should increase drop rates too. [Start]
+
 					if(rnd()%10000 >= temp) //if ==0, then it doesn't drop
 						continue;
 				}
@@ -4280,7 +4306,7 @@ bool MobDatabase::parseDropNode(std::string nodeName, const ryml::NodeRef& node,
 
 	// Find first empty spot
 	for( i = 0; i < max; i++ ){
-		if( drops[i].nameid == 0 ){
+		if (drops[i].nameid == 0) {
 			break;
 		}
 	}
@@ -4468,7 +4494,7 @@ uint64 MobDatabase::parseBodyNode(const ryml::NodeRef& node) {
 		mob->base_exp = static_cast<t_exp>(cap_value((double)exp * (double)battle_config.base_exp_rate / 100., 0, MAX_EXP));
 	} else {
 		if (!exists)
-			mob->base_exp = 0;
+			mob->base_exp = static_cast<t_exp>(cap_value((double)(mob->status.max_hp / 5) * (double)battle_config.base_exp_rate / 100., 0, MAX_EXP));
 	}
 	
 	if (this->nodeExists(node, "JobExp")) {
@@ -4480,7 +4506,7 @@ uint64 MobDatabase::parseBodyNode(const ryml::NodeRef& node) {
 		mob->job_exp = static_cast<t_exp>(cap_value((double)exp * (double)battle_config.job_exp_rate / 100., 0, MAX_EXP));
 	} else {
 		if (!exists)
-			mob->job_exp = 0;
+			mob->job_exp = static_cast<t_exp>(cap_value((double)(mob->status.max_hp / 5) * (double)battle_config.job_exp_rate / 100., 0, MAX_EXP));
 	}
 	
 	if (this->nodeExists(node, "MvpExp")) {
@@ -5268,7 +5294,7 @@ static int mob_read_sqldb(void)
 	for( uint8 fi = 0; fi < ARRAYLENGTH(mob_db_name); ++fi ) {
 		// retrieve all rows from the mob database
 		if( SQL_ERROR == Sql_Query(mmysql_handle, "SELECT `id`,`name_aegis`,`name_english`,`name_japanese`,`level`,`hp`,`sp`,`base_exp`,`job_exp`,`mvp_exp`,`attack`,`attack2`,`defense`,`magic_defense`,`str`,`agi`,`vit`,`int`,`dex`,`luk`,`attack_range`,`skill_range`,`chase_range`,`size`,`race`,"
-			"`racegroup_goblin`,`racegroup_kobold`,`racegroup_orc`,`racegroup_golem`,`racegroup_guardian`,`racegroup_ninja`,`racegroup_gvg`,`racegroup_battlefield`,`racegroup_treasure`,`racegroup_biolab`,`racegroup_manuk`,`racegroup_splendide`,`racegroup_scaraba`,`racegroup_ogh_atk_def`,`racegroup_ogh_hidden`,`racegroup_bio5_swordman_thief`,`racegroup_bio5_acolyte_merchant`,`racegroup_bio5_mage_archer`,`racegroup_bio5_mvp`,`racegroup_clocktower`,`racegroup_thanatos`,`racegroup_faceworm`,`racegroup_hearthunter`,`racegroup_rockridge`,`racegroup_werner_lab`,`racegroup_temple_demon`,`racegroup_illusion_vampire`,`racegroup_malangdo`,"
+			"`racegroup_goblin`,`racegroup_kobold`,`racegroup_orc`,`racegroup_golem`,`racegroup_guardian`,`racegroup_ninja`,`racegroup_gvg`,`racegroup_battlefield`,`racegroup_treasure`,`racegroup_biolab`,`racegroup_manuk`,`racegroup_splendide`,`racegroup_scaraba`,`racegroup_ogh_atk_def`,`racegroup_ogh_hidden`,`racegroup_bio5_swordman_thief`,`racegroup_bio5_acolyte_merchant`,`racegroup_bio5_mage_archer`,`racegroup_bio5_mvp`,`racegroup_clocktower`,`racegroup_thanatos`,`racegroup_faceworm`,`racegroup_hearthunter`,`racegroup_rockridge`,`racegroup_werner_lab`,`racegroup_temple_demon`,`racegroup_illusion_vampire`,`racegroup_malangdo`,`racegroup_ep172alpha`,`racegroup_ep172beta`,`racegroup_ep172bath`,"
 			"`element`,`element_level`,`walk_speed`,`attack_delay`,`attack_motion`,`damage_motion`,`damage_taken`,`ai`,`class`,"
 			"`mode_canmove`,`mode_looter`,`mode_aggressive`,`mode_assist`,`mode_castsensoridle`,`mode_norandomwalk`,`mode_nocast`,`mode_canattack`,`mode_castsensorchase`,`mode_changechase`,`mode_angry`,`mode_changetargetmelee`,`mode_changetargetchase`,`mode_targetweak`,`mode_randomtarget`,`mode_ignoremelee`,`mode_ignoremagic`,`mode_ignoreranged`,`mode_mvp`,`mode_ignoremisc`,`mode_knockbackimmune`,`mode_teleportblock`,`mode_fixeditemdrop`,`mode_detector`,`mode_statusimmune`,`mode_skillimmune`,"
 			"`mvpdrop1_item`,`mvpdrop1_rate`,`mvpdrop1_option`,`mvpdrop1_index`,`mvpdrop2_item`,`mvpdrop2_rate`,`mvpdrop2_option`,`mvpdrop2_index`,`mvpdrop3_item`,`mvpdrop3_rate`,`mvpdrop3_option`,`mvpdrop3_index`,"

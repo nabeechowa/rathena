@@ -4173,54 +4173,6 @@ ein_in01,95,239,3	script	Conveyor#ins2	111,{
 	end;
 }
 
-// Administrator NPC used to rig the invasion in Einbroch.
-sec_in02,127,86,3	script	Factory Quest Test	851,{
-	set .@i, callfunc("F_GM_NPC",8028,0,0,9000);
-	if (.@i == -2) {
-		mes "[Test1]";
-		mes "Boo~ya.";
-		close;
-	} else if (.@i == -1) {
-		mes "[Test1]";
-		mes "Do you want";
-		mes "to cancel~?";
-		close;
-	} else if (.@i == 0) {
-		mes "[Test1]";
-		mes "Whoa...";
-		mes "That is";
-		mes "sooo wrong!";
-		close;
-	} else {
-		mes "[Test1]";
-		mes "The current value";
-		mes "of the global variable";
-		mes "for the Factory Quest";
-		mes "is... ^3355FF" + z + "^000000.";
-		mes "You wanna change?";
-		next;
-		switch(select("0:10:Invade")) {
-		case 1:
-			mes "[Test1]";
-			mes "Okay...!";
-			mes "It's been";
-			mes "changed to ''0.''";
-			set $EinPolution,0;
-			close;
-		case 2:
-			mes "[Test2]";
-			mes "Okay...!";
-			mes "It's been";
-			mes "changed to ''10.''";
-			set $EinPolution,10;
-			close;
-		case 3:
-			donpcevent "Einbroch Smog Alert::OnEnable";
-			close;
-		}
-	}
-}
-
 // Murder Quest :: ein_main_tre
 //============================================================ 
 einbech,165,105,7	script	Buender Hikeman#ein	847,{

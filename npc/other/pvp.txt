@@ -275,7 +275,7 @@ L_Warp:
 }
 morocc_in,144,142,4	duplicate(gkut)	Gate Keeper#gke1	83
 alberta_in,26,146,4	duplicate(gkut)	Gate Keeper#gke2	83
-prt_in,52,140,4	duplicate(gkut)	Gate Keeper#gke3	83
+izlude,134,118,4	duplicate(gkut)	Gate Keeper#gke3	83
 geffen_in,63,63,4	duplicate(gkut)	Gate Keeper#gke4	83
 payon_in01,140,53,4	duplicate(gkut)	Gate Keeper#gke5	83
 

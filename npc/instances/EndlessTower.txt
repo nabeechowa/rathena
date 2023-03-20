@@ -326,33 +326,6 @@ OnTouch:
 	end;
 }
 
-// Original name: "#102Administrator Mode104"
-e_tower,1,1,2	script	#102Administrator Mode	844,{
-	callfunc "F_GM_NPC";
-	mes "Please enter the password";
-	set .@i, callfunc("F_GM_NPC","dmc2008",1);
-	next;
-	if (.@i == 1) {
-		switch(select("Generate Purification Stone:Remove Purification Stone:Cancel")) {
-		case 1:
-			mes "Create the Purification Stone that stays for 30 minutes.";
-			donpcevent "Purification Stone#et1::OnEnable";
-			break;
-		case 2:
-			mes "Destroy the Purification Stone immediately";
-			donpcevent "Purification Stone#et1::OnDisable";
-			break;
-		case 3:
-			mes "You have canceled it.";
-			break;
-		}
-		close;
-	} else {
-		mes "Enter the password exactly.";
-		close;
-	}
-}
-
 e_tower,69,117,4	script	Purification Stone#et1	406,{
 	set etower_timer,0;
 	mes "^0000ffThe records and aftereffects related to the Endless Tower have been removed. You can generate and enter the Endless Tower again.^000000";
@@ -384,14 +357,6 @@ OnTimer1800000:
 	end;
 }
 
-e_tower,151,185,4	script	Purification Stone#et2	844,{
-	callfunc "F_GM_NPC";
-	set etower_timer,0;
-	mes "^0000ffThe records and aftereffects related to the Endless Tower have been removed. You can generate and enter the Endless Tower again.^000000";
-	close2;
-	warp "e_tower",75,108;
-	end;
-}
 
 // Core Functions
 //============================================================
@@ -1364,26 +1329,6 @@ OnTimer120000:
 	end;
 }
 
-1@tower,71,1,0	script	#Manager Mode1	844,{
-	callfunc "F_GM_NPC";
-	mes "Please enter the password.";
-	set .@i, callfunc("F_GM_NPC","dmc2008",1);
-	next;
-	if (.@i == 1) {
-		mes "This NPC manages the tower from the 1st to the 25th Level.";
-		mes "Please enter the Level number to open.";
-		mes "(i.g.: 1F->1, 25F->25)";
-		input .@input,1,25;
-		next;
-		if (.@input < 1 || .@input > 25)
-			mes "You can only enter a number from 1 to 25.";
-		else {
-			donpcevent instance_npcname(.@input+"FGate102tower")+"::OnEnable";
-			mes "*** Level "+ .@input + " is now being opened. ***";
-		}
-	}
-	close;
-}
 
 // Levels 26-50
 //============================================================
@@ -1480,26 +1425,6 @@ OnTouch_:
 	end;
 }
 
-2@tower,71,1,0	script	#Manager Mode2	844,{
-	callfunc "F_GM_NPC";
-	mes "Please enter the password.";
-	set .@i, callfunc("F_GM_NPC","dmc2008",1);
-	next;
-	if (.@i == 1) {
-		mes "This NPC manages the tower from the 26st to the 50th Level.";
-		mes "Please enter the Level number to open.";
-		mes "(i.g.: 26F->26, 50F->50)";
-		input .@input,26,50;
-		next;
-		if (.@onput < 26 || .@input > 50)
-			mes "You can only enter a number from 26 to 50.";
-		else {
-			donpcevent instance_npcname(.@input+"FGate102tower")+"::OnEnable";
-			mes "*** Level "+ .@input + " is now being opened. ***";
-		}
-	}
-	close;
-}
 
 // Levels 51-75
 //============================================================
@@ -1596,26 +1521,6 @@ OnTouch_:
 	end;
 }
 
-3@tower,71,1,0	script	#Manager Mode3	844,{
-	callfunc "F_GM_NPC";
-	mes "Please enter the password.";
-	set .@i, callfunc("F_GM_NPC","dmc2008",1);
-	next;
-	if (.@i == 1) {
-		mes "This NPC manages the tower from the 51st to the 75th Level.";
-		mes "Please enter the Level number to open.";
-		mes "(i.g.: 51F->51, 75F->75)";
-		input .@input,51,75;
-		next;
-		if (.@input < 51 || .@input > 75)
-			mes "You can only enter a number from 51 to 75.";
-		else {
-			donpcevent instance_npcname(.@input+"FGate102tower")+"::OnEnable";
-			mes "*** Level "+ .@input + " is now being opened. ***";
-		}
-	}
-	close;
-}
 
 // Levels 76-99
 //============================================================
@@ -1711,26 +1616,6 @@ OnTouch_:
 	end;
 }
 
-4@tower,71,1,0	script	#Manager Mode4	844,{
-	callfunc "F_GM_NPC";
-	mes "Please enter the password.";
-	set .@i, callfunc("F_GM_NPC","dmc2008",1);
-	next;
-	if (.@i == 1) {
-		mes "This NPC manages the tower from the 76th to the 99th Level.";
-		mes "Please enter the Level number to open.";
-		mes "(i.g.: 76F->76, 99F->99)";
-		input .@input,76,99;
-		next;
-		if (.@input < 76 || .@input > 99)
-			mes "You can only enter a number from 76 to 99.";
-		else {
-			donpcevent instance_npcname(.@input+"FGate102tower")+"::OnEnable";
-			mes "*** Level "+ .@input + " is now being opened. ***";
-		}
-	}
-	close;
-}
 
 // Level 100
 //============================================================
@@ -1901,19 +1786,6 @@ OnEnable:
 		case 3: monster .@map$,84,85,"Thorn of Pureness",1961,1; break;
 	}
 	end;
-}
-
-5@tower,71,1,0	script	#Manager Mode5	844,{
-	callfunc "F_GM_NPC";
-	mes "This NPC manages the crystal on the 100th Level. Please enter the password.";
-	set .@i, callfunc("F_GM_NPC","dmc2008",1);
-	next;
-	if (.@i == 1) {
-		donpcevent instance_npcname("Lucid Crystal#102")+"::OnEnable";
-		mes "The 100th Level's crystal has been activated.";
-	} else
-		mes "Please enter the correct password.";
-	close;
 }
 
 // Level 101

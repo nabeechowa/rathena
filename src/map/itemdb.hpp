@@ -1834,6 +1834,78 @@ enum e_random_item_group {
 	IG_CLASS_SHADOW_PD_CUBE,
 	IG_CLASS_SHADOW_EA_CUBE,
 	IG_ENCHANT_STONE_BOX30,
+	IG_AEGIS_101920,
+	IG_AEGIS_101921,
+	IG_AEGIS_101923,
+	IG_AEGIS_101924,
+	IG_AEGIS_101925,
+
+///Apaca item Import
+	IG_ALPACA01,
+	IG_ALPACA02,
+	IG_ALPACA03,
+	IG_ALPACA04,
+	IG_ALPACA05,
+	IG_ALPACA06,
+	IG_ALPACA07,
+	IG_ALPACA08,
+	IG_ALPACA09,
+	IG_ALPACA10,
+	IG_ALPACA11,
+	IG_ALPACA12,
+	IG_ALPACA13,
+	IG_ALPACA14,
+	IG_ALPACA15,
+	IG_ALPACA16,
+	IG_ALPACA17,
+	IG_ALPACA18,
+	IG_ALPACA19,
+	IG_ALPACA20,
+	IG_ALPACA21,
+	IG_ALPACA22,
+	IG_ALPACA23,
+	IG_ALPACA24,
+	IG_ALPACA25,
+	IG_ALPACA26,
+	IG_ALPACA27,
+	IG_ALPACA28,
+	IG_ALPACA29,
+	IG_ALPACA30,
+	IG_ALPACA_OCP_02_2566,
+	IG_ALPACA_OCP_03_2566,
+	IG_ALPACA_OCP_04_2566,
+	IG_ALPACA_OCP_05_2566,
+	IG_ALPACA_OCP_06_2566,
+	IG_ALPACA_OCP_07_2566,
+	IG_ALPACA_OCP_08_2566,
+	IG_ALPACA_OCP_09_2566,
+	IG_ALPACA_OCP_10_2566,
+	IG_ALPACA_OCP_11_2566,
+	IG_ALPACA_OCP_12_2566,
+	IG_ALPACA_OCP_01_2567,
+	IG_ALPACA_OCP_02_2567,
+	IG_ALPACA_OCP_03_2567,
+	IG_ALPACA_OCP_04_2567,
+	IG_ALPACA_OCP_05_2567,
+	IG_ALPACA_OCP_06_2567,
+	IG_ALPACA_OCP_07_2567,
+	IG_ALPACA_OCP_08_2567,
+	IG_ALPACA_OCP_09_2567,
+	IG_ALPACA_OCP_10_2567,
+	IG_ALPACA_OCP_11_2567,
+	IG_ALPACA_OCP_12_2567,
+	IG_ALPACA_OCP_01_2568,
+	IG_ALPACA_EVENT,
+	IG_ALPACA_OCP,
+	IG_ALPACA_OCP_RERUN,
+	IG_COS_UPPER,
+	IG_COS_MIDDLE,
+	IG_COS_LOWER,
+	IG_Zeny_Bag_Box,
+	IG_AUTOMATIC_MODULE,
+	IG_AUTOMATIC_EPIC_MODULE,
+	IG_ODIN_RELIC,
+	IG_ENCHANTSTONE_RECIPE_3M,
 
 	IG_MAX,
 };
@@ -2019,6 +2091,7 @@ struct s_item_group_random
 struct s_item_group_db
 {
 	uint16 id; /// Item Group ID
+	t_itemid announce_box_id; /// Item ID to be used in ZC_BROADCASTING_SPECIAL_ITEM_OBTAIN packet
 	std::unordered_map<uint16, std::shared_ptr<s_item_group_random>> random;	/// group ID, s_item_group_random
 };
 
@@ -2163,7 +2236,7 @@ extern ItemDatabase item_db;
 
 class ItemGroupDatabase : public TypesafeCachedYamlDatabase<uint16, s_item_group_db> {
 public:
-	ItemGroupDatabase() : TypesafeCachedYamlDatabase("ITEM_GROUP_DB", 2, 1) {
+	ItemGroupDatabase() : TypesafeCachedYamlDatabase("ITEM_GROUP_DB", 3, 1) {
 
 	}
 
@@ -2218,6 +2291,7 @@ struct s_laphine_upgrade{
 	uint16 resultRefine;
 	uint16 resultRefineMinimum;
 	uint16 resultRefineMaximum;
+	std::unordered_map<uint16, uint16> resultRefineRate;
 };
 
 class LaphineUpgradeDatabase : public TypesafeYamlDatabase<t_itemid, s_laphine_upgrade>{

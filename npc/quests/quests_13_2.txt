@@ -4596,64 +4596,6 @@ OnTimer300000:
 	end;
 }
 
-mid_camp,7,3,0	script	Translator Preparation#1	708,{
-	callfunc "F_GM_NPC";
-	mes "[EP13 Translator Quest Preparation]";
-	mes "First, you must confirm that you are my master.";
-	next;
-	set .@i, callfunc("F_GM_NPC",1854,0);
-	if (.@i == -1) {
-		mes "[EP 13 Translator Quest Preparation]";
-		mes "Cancelled";
-		close;
-	} else if (.@i == 0) {
-		mes "[EP 13 Translator Quest Preparation]";
-		mes "Try again.";
-		close;
-	} else {
-		mes "[EP 13 Translator Quest Preparation]";
-		mes "I'm the NPC who gives the Episode 13.2 Translator Quest's Linked-Quest Items.";
-		next;
-		mes "What would you like to do?";
-		next;
-		switch(select("Receive EP13.1 Quest:Receive Quest Window - Meeting with Fairy and Giant")) {
-		case 1:
-			mes "[EP 13 Translator Quest Preparation]";
-			mes "Episode 13.1 - The Report Quest Reward Item Received.";
-			next;
-			mes "[EP 13 Translator Quest Preparation]";
-			mes "Currently the Report Quest's Set Item is "+ep13_1_edq+".";
-			mes "Do you want to proceed?";
-			next;
-			if(select("No:Yes") == 1) {
-				mes "[EP 13 Translator Quest Preparation]";
-				mes "Cancelled";
-				close;
-			}
-			mes "[EP 13 Translator Quest Preparation]";
-			mes "Episode 13.1 - The Report Quest Reward Item Received.";
-			set ep13_1_edq,14;
-			close;
-		case 2:
-			mes "[EP 13 Translator Quest Preparation]";
-			mes "Episode 13.1 - Receiving the Quest window - Meeting with Fairy and Giant.";
-			next;
-			mes "[EP 13 Translator Quest Preparation]";
-			mes "Do you want to proceed?";
-			next;
-			if(select("No:Yes") == 1) {
-				mes "[EP 13 Translator Quest Preparation]";
-				mes "Cancelled";
-				close;
-			}
-			mes "[EP 13 Translator Quest Preparation]";
-			mes "Episode 13.1 - The Report Quest Reward Item Received.";
-			setquest 2158;
-			setquest 2159;
-			close;
-		}
-	}
-}
 
 // Daily Quests :: ep13_2_tre
 // - Midgard Ore
@@ -7309,27 +7251,6 @@ OnTouch_:
 nyd_dun01,255,142,0	warp	nynm_dun1f_to_2f	1,1,nyd_dun02,61,265
 nyd_dun02,56,264,0	warp	nynm_dun2f_to_1f	1,1,nyd_dun01,249,143
 
-nyd_dun02,1,1,0	script	ep13_nd2f_mng	844,{
-	callfunc "F_GM_NPC";
-	mes "Enter password.";
-	next;
-	if (callfunc("F_GM_NPC",1854,0) == 1) {
-		mes "Reset Control devices?";
-		next;
-		switch(select("Yes:No")) {
-		case 1:
-			donpcevent "ep13_nd2f_mng::OnReset";
-			set $@08_ep13nydun02_in,0;
-			mes "Done.";
-			close;
-		case 2:
-			mes "Canceled.";
-			close;
-		}
-	} else {
-		mes "Invalid.";
-		close;
-	}
 
 OnReset:
 	donpcevent "ep13_warp_s1::OnEnable";

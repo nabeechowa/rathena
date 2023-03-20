@@ -286,7 +286,7 @@ void log_zeny(const map_session_data &target_sd, e_log_pick_type type, uint32 sr
 
 	if( log_config.sql_logs )
 	{
-		if (SQL_ERROR == Sql_Query(logmysql_handle, LOG_QUERY " INTO `%s` (`time`, `char_id`, `src_id`, `type`, `amount`, `map`) VALUES (NOW(), '%d', '%d', '%c', '%d', '%s')",
+		if( SQL_ERROR == Sql_Query(logmysql_handle, LOG_QUERY " INTO `%s` (`time`, `char_id`, `src_id`, `type`, `amount`, `map`) VALUES (NOW(), '%d', '%d', '%c', '%d', '%s')",
 			log_config.log_zeny, target_sd.status.char_id, src_id, log_picktype2char(type), amount, mapindex_id2name(target_sd.mapindex)))
 		{
 			Sql_ShowDebug(logmysql_handle);

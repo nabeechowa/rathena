@@ -1484,36 +1484,6 @@ OnTouch_:
 	}
 }
 
-sec_in02,15,15,4	script	boss::boss_aru_monas	809,{
-	callfunc "F_GM_NPC";
-	mes "[Patch]";
-	mes "Input.";
-	next;
-	switch(select("Now:How much?:P- How much?:Others")) {
-	case 1:
-		mes " ";
-		mes ""+aru_monas;
-		close;
-	case 2:
-		input .@input,0,1000;
-		set aru_monas, .@input;
-		mes " ";
-		mes ""+aru_monas;
-		close;
-	case 3:
-		input .@input,0,1000;
-		set prt_curse, .@input;
-		mes " ";
-		mes ""+prt_curse;
-		close;
-	case 4:
-		set prt_curse,61;
-		set ra_tem_q,12; //TODO: Doesn't match Athena's current script.
-		set rachel_camel,25;
-		set lost_boy,0;
-		close;
-	}
-}
 
 // Rachel Addition :: aruna_nir
 //============================================================

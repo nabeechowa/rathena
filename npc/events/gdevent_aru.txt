@@ -1513,27 +1513,3 @@ arug_que01,119,105,3	duplicate(GD_Ev_Flower)	#aru_flower_52	977
 arug_que01,114,105,3	duplicate(GD_Ev_Flower)	#aru_flower_53	978
 arug_que01,109,105,3	duplicate(GD_Ev_Flower)	#aru_flower_54	977
 arug_que01,104,105,3	duplicate(GD_Ev_Flower)	#aru_flower_55	976
-
-arug_dun01,5,5,1	script	Event controller#aru_gd	81,{
-	if (callfunc("F_GM_NPC",1854,0) < 1) {
-		mes "Incorrect password.";
-		close;
-	} else {
-		mes "How can I help you?";
-		next;
-		switch(select("Reset.:No, thanks.")) {
-		case 1:
-			mes "Completed.";
-			donpcevent "Monster Controler1#aru::OnControler1#aru_gd";
-			donpcevent "Monster Controler1#aru::OnControler1#aru_gd";
-			disablenpc "Dwarf#aru_gd";
-			set $@gdeventv_a1,0;
-			set $@gdeventv_a2,0;
-			set $@gdevents_a$,"";
-			close;
-		case 2:
-			mes "Good bye~";
-			close;
-		}
-	}
-}

@@ -9,6 +9,8 @@
 // mapname <- map will use index of previous map +1
 // Note that map index 0 is special and reserved for "error" status. 
 
+
+//---------------------
 alb_ship 1
 alb2trea
 alberta
@@ -1172,6 +1174,9 @@ bl_grass
 bl_lava
 bl_ice
 bl_death
+bl_soul
+bl_temple
+bl_venom
 clock_01
 rag_fes
 rag_fes_a
@@ -1182,6 +1187,11 @@ prt_elib
 1@vrev
 1@vrgen
 1@vrpo
+1@vrac1
+1@vrac2
+1@vrclo
+1@vrhha
+2@vrclo
 1@pdb
 airplane2
 vr_bob
@@ -1200,17 +1210,25 @@ hero_out3
 hero_out4
 hero_tra
 herosria
-1@vrac1
-1@vrac2
-1@vrclo
-1@vrhha
-2@vrclo
-bl_soul
-bl_temple
-bl_venom
 mjo_wst01
 ra_pol01
 
+//Alpaca RO map
+firstcity
+league
+1@zod
+2@zod
+3@zod
+4@zod
+celestiaj
+ilyo_kwan
+lunar01
+maint
+veil
+1@antgm
+2@antgm
+3@antgm
+1@mtower
 //======================================================================================
 // - Other/Extra maps -
 //======================================================================================

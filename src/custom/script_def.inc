@@ -9,3 +9,6 @@
  **/
 
 //BUILDIN_DEF(example,""),
+
+BUILDIN_DEF(isspawn,"i?"),
+BUILDIN_DEF(fakeplayerzxc,"siisiiiiiiiiiii"),

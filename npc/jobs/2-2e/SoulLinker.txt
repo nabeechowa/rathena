@@ -665,42 +665,6 @@ OnTimer183000:
 	stopnpctimer;
 }
 
-sec_in02,35,153,0	script	Soul Linker Var	871,{
-	callfunc "F_GM_NPC";
-	mes "[Soul Linker Var]";
-	mes "I can reset the Soul Linker";
-	mes "NPCs if a Soul Linker candidate";
-	mes "encounters a problem during the";
-	mes "end of the job quest. Please do";
-	mes "not use this function if players are still in the Quest Map.";
-	next;
-	if (callfunc("F_GM_NPC",1854,0) < 1) {
-		mes "[Soul Linker Var]";
-		mes "Password";
-		mes "is incorrect.";
-		close;
-	} else {
-		mes "[Soul Linker Var]";
-		mes "Would you like to";
-		mes "reset the Soul Linker";
-		mes "Global Variable?";
-		next;
-		switch(select("Reset:Cancel")) {
-		case 1:
-			mes "[Soul Linker Var]";
-			mes "The Soul Linker";
-			mes "Job Quest NPCs";
-			mes "have been reset.";
-			set getvariableofnpc(.SoulLinkerTest,"Kid#link1"),0;
-			close;
-		case 2:
-			mes "[Soul Linker Var]";
-			mes "You have canceled";
-			mes "this command.";
-			close;
-		}
-	}
-}
 
 //============================================================ 
 // Old changelog
