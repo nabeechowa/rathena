@@ -51,3 +51,4 @@ Footer:
     Mode: Renewal
   - Path: npc/custom/barters.yml
   - Path: npc/ncpalpaca/barters/AP_Barters1.yml
+  - Path: npc/ncpalpaca/barters/GeffenNightArena.yml

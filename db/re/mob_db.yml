@@ -7642,7 +7642,7 @@ Body:
       - Item: Sticky_Mucus
         Rate: 350
       - Item: Alchol
-        Rate: 2
+        Rate: 30
       - Item: Wing_Of_Fly
         Rate: 500
       - Item: Dew_Laden_Moss
@@ -16858,7 +16858,7 @@ Body:
       - Item: Yellow_Herb
         Rate: 400
       - Item: Izidor
-        Rate: 10
+        Rate: 5
       - Item: Electric_Fist
         Rate: 10
       - Item: Harpy_Card
@@ -95080,7 +95080,7 @@ Body:
       - Item: Elunium
         Rate: 20
       - Item: EP17_1_EVT39
-        Rate: 3
+        Rate: 300
   - Id: 20344
     AegisName: MD_VENOM_BUG
     Name: Chemical Poison
@@ -95251,7 +95251,7 @@ Body:
       - Item: Tendon
         Rate: 2000
       - Item: EP17_1_EVT39
-        Rate: 3
+        Rate: 300
   - Id: 20349
     AegisName: MD_A013_DOLOR
     Name: A013 - Dolor
@@ -95289,7 +95289,7 @@ Body:
       - Item: Wooden_Block
         Rate: 1000
       - Item: EP17_1_EVT39
-        Rate: 3
+        Rate: 300
       - Item: Bloody_Rune
         Rate: 800
   - Id: 20350
@@ -95454,7 +95454,7 @@ Body:
       - Item: Elunium
         Rate: 12
       - Item: EP17_1_EVT39
-        Rate: 5
+        Rate: 500
       - Item: EP17_1_EVT02
         Rate: 10
       - Item: Explosive_Powder
@@ -95499,7 +95499,7 @@ Body:
       - Item: Elunium
         Rate: 24
       - Item: EP17_1_EVT39
-        Rate: 10
+        Rate: 100
       - Item: Explosive_Powder
         Rate: 60
       - Item: EP17_1_EVT02
@@ -95589,7 +95589,7 @@ Body:
       - Item: Elunium
         Rate: 24
       - Item: EP17_1_EVT39
-        Rate: 10
+        Rate: 100
       - Item: Explosive_Powder
         Rate: 60
       - Item: EP17_1_EVT02
@@ -95636,7 +95636,7 @@ Body:
       - Item: Azure_Jewel
         Rate: 50
       - Item: EP17_1_EVT39
-        Rate: 5
+        Rate: 500
       - Item: Plaga_Card
         Rate: 1
         StealProtected: true
@@ -95679,7 +95679,7 @@ Body:
       - Item: Azure_Jewel
         Rate: 50
       - Item: EP17_1_EVT39
-        Rate: 10
+        Rate: 100
       - Item: Mutant_Plaga_Card
         Rate: 1
         StealProtected: true
@@ -95720,7 +95720,7 @@ Body:
       - Item: Wooden_Block
         Rate: 1000
       - Item: EP17_1_EVT39
-        Rate: 5
+        Rate: 500
       - Item: Bloody_Rune
         Rate: 800
       - Item: Dolor_Card
@@ -95763,7 +95763,7 @@ Body:
       - Item: Wooden_Block
         Rate: 2000
       - Item: EP17_1_EVT39
-        Rate: 5
+        Rate: 500
       - Item: Bloody_Rune
         Rate: 1600
       - Item: Mt_Dolor_Card
@@ -95810,7 +95810,7 @@ Body:
       - Item: Elunium
         Rate: 10
       - Item: EP17_1_EVT39
-        Rate: 5
+        Rate: 500
       - Item: Venenum_Card
         Rate: 1
         StealProtected: true
@@ -95855,7 +95855,7 @@ Body:
       - Item: Elunium
         Rate: 20
       - Item: EP17_1_EVT39
-        Rate: 10
+        Rate: 100
       - Item: Mt_Venenum_Card
         Rate: 1
         StealProtected: true
@@ -95898,7 +95898,7 @@ Body:
       - Item: Tendon
         Rate: 1000
       - Item: EP17_1_EVT39
-        Rate: 5
+        Rate: 500
       - Item: Caput_Card
         Rate: 1
         StealProtected: true
@@ -95941,7 +95941,7 @@ Body:
       - Item: Tendon
         Rate: 2000
       - Item: EP17_1_EVT39
-        Rate: 10
+        Rate: 100
       - Item: Mt_Caput_Card
         Rate: 1
         StealProtected: true
@@ -100099,8 +100099,8 @@ Body:
     Name: Red Pitaya
     Level: 162
     Hp: 648023
-    BaseExp: 54002
-    JobExp: 37801
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 2673
     Attack2: 972
     Defense: 351
@@ -100152,8 +100152,8 @@ Body:
     Name: Yellow Pitaya
     Level: 164
     Hp: 658607
-    BaseExp: 54884
-    JobExp: 38419
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 2624
     Attack2: 1006
     Defense: 434
@@ -100205,8 +100205,8 @@ Body:
     Name: Blue Pitaya
     Level: 165
     Hp: 662911
-    BaseExp: 47351
-    JobExp: 33146
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 2454
     Attack2: 1111
     Defense: 444
@@ -100258,8 +100258,8 @@ Body:
     Name: Violet Pitaya
     Level: 165
     Hp: 665510
-    BaseExp: 47536
-    JobExp: 33276
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 2516
     Attack2: 858
     Defense: 525
@@ -100311,8 +100311,8 @@ Body:
     Name: Green Pitaya
     Level: 166
     Hp: 668381
-    BaseExp: 44559
-    JobExp: 31191
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 2573
     Attack2: 741
     Defense: 490
@@ -100545,8 +100545,8 @@ Body:
     Name: Red Pitaya
     Level: 132
     Hp: 158478
-    BaseExp: 14407
-    JobExp: 10085
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 1205
     Attack2: 528
     Defense: 267
@@ -100589,8 +100589,8 @@ Body:
     Name: Yellow Pitaya
     Level: 134
     Hp: 162599
-    BaseExp: 14782
-    JobExp: 10347
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 1206
     Attack2: 554
     Defense: 335
@@ -100633,8 +100633,8 @@ Body:
     Name: Blue Pitaya
     Level: 135
     Hp: 163655
-    BaseExp: 14878
-    JobExp: 10414
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 1181
     Attack2: 648
     Defense: 330
@@ -100677,8 +100677,8 @@ Body:
     Name: Violet Pitaya
     Level: 135
     Hp: 165308
-    BaseExp: 15028
-    JobExp: 10520
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 1688
     Attack2: 486
     Defense: 393
@@ -100721,8 +100721,8 @@ Body:
     Name: Green Pitaya
     Level: 136
     Hp: 165105
-    BaseExp: 15010
-    JobExp: 10507
+    BaseExp: 1610240
+    JobExp: 1027180
     Attack: 1666
     Attack2: 807
     Defense: 340
@@ -101421,7 +101421,7 @@ Body:
       - Item: Heart_Hunter_Seal
         Rate: 2500
       - Item: EP17_1_EVT39
-        Rate: 10
+        Rate: 100
       - Item: EP17_1_EVT02
         Rate: 30
       - Item: Elunium_Stone
@@ -101499,7 +101499,7 @@ Body:
       - Item: Heart_Hunter_Seal
         Rate: 2500
       - Item: EP17_1_EVT39
-        Rate: 10
+        Rate: 100
       - Item: EP17_1_EVT02
         Rate: 30
       - Item: Shadowdecon_Ore

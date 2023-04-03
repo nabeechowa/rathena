@@ -925,7 +925,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 800
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -941,7 +941,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -957,7 +957,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -973,7 +973,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -989,7 +989,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1005,7 +1005,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1021,7 +1021,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1037,7 +1037,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1053,7 +1053,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1069,7 +1069,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1085,7 +1085,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1101,7 +1101,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1117,7 +1117,7 @@ Body:
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 800
                 Price: 1000000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
@@ -1129,12 +1129,12 @@ Body:
             Chances:
               - Type: Normal
                 Rate: 500
-                Price: 2000000
+                Price: 1000000
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 2000000
+                Rate: 800
+                Price: 1000000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
           - Level: 33
@@ -1145,12 +1145,12 @@ Body:
             Chances:
               - Type: Normal
                 Rate: 500
-                Price: 3000000
+                Price: 1000000
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 3000000
+                Rate: 800
+                Price: 1000000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
           - Level: 34
@@ -1161,17 +1161,257 @@ Body:
             Chances:
               - Type: Normal
                 Rate: 500
-                Price: 4000000
+                Price: 1000000
                 Material: Etel_Carnium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 4000000
+                Rate: 800
+                Price: 1000000
                 Material: HD_Etel_Carnium
                 BreakingRate: 10000
           - Level: 35
             Bonus: 300
             BlacksmithBlessingAmount: 37
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 1000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 36
+            Bonus: 300
+            BlacksmithBlessingAmount: 38
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 37
+            Bonus: 300
+            BlacksmithBlessingAmount: 39
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 38
+            Bonus: 300
+            BlacksmithBlessingAmount: 40
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 39
+            Bonus: 300
+            BlacksmithBlessingAmount: 41
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 40
+            Bonus: 300
+            BlacksmithBlessingAmount: 42
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 41
+            Bonus: 300
+            BlacksmithBlessingAmount: 43
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 42
+            Bonus: 300
+            BlacksmithBlessingAmount: 44
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 43
+            Bonus: 300
+            BlacksmithBlessingAmount: 45
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 44
+            Bonus: 300
+            BlacksmithBlessingAmount: 46
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 45
+            Bonus: 300
+            BlacksmithBlessingAmount: 47
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 46
+            Bonus: 300
+            BlacksmithBlessingAmount: 48
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 47
+            Bonus: 300
+            BlacksmithBlessingAmount: 49
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 48
+            Bonus: 300
+            BlacksmithBlessingAmount: 50
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 49
+            Bonus: 300
+            BlacksmithBlessingAmount: 51
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 5000000
+                Material: Etel_Carnium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 5000000
+                Material: HD_Etel_Carnium
+                BreakingRate: 10000
+          - Level: 50
+            Bonus: 300
+            BlacksmithBlessingAmount: 52
             BroadcastSuccess: true
             BroadcastFailure: true
             Chances:
@@ -3913,12 +4153,12 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
+                Rate: 800
                 Price: 100000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 900
                 Price: 100000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
@@ -3929,13 +4169,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 700
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 900
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 21
@@ -3945,13 +4185,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 22
@@ -3961,13 +4201,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 23
@@ -3977,13 +4217,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 24
@@ -3993,13 +4233,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 25
@@ -4009,13 +4249,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 26
@@ -4025,13 +4265,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 27
@@ -4041,13 +4281,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 28
@@ -4057,13 +4297,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 29
@@ -4073,13 +4313,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 30
@@ -4089,13 +4329,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 100000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 100000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 31
@@ -4105,13 +4345,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 1000000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 1000000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 32
@@ -4121,13 +4361,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 2000000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 2000000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 33
@@ -4137,13 +4377,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 3000000
+                Rate: 600
+                Price: 70000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 3000000
+                Rate: 800
+                Price: 70000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 34
@@ -4153,13 +4393,13 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
-                Rate: 500
-                Price: 4000000
+                Rate: 600
+                Price: 1000000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
-                Price: 4000000
+                Rate: 800
+                Price: 1000000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000
           - Level: 35
@@ -4169,12 +4409,252 @@ Body:
             BroadcastFailure: true
             Chances:
               - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 36
+            Bonus: 300
+            BlacksmithBlessingAmount: 42
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 37
+            Bonus: 300
+            BlacksmithBlessingAmount: 43
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 38
+            Bonus: 300
+            BlacksmithBlessingAmount: 44
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 39
+            Bonus: 300
+            BlacksmithBlessingAmount: 45
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 40
+            Bonus: 300
+            BlacksmithBlessingAmount: 46
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 41
+            Bonus: 300
+            BlacksmithBlessingAmount: 47
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 42
+            Bonus: 300
+            BlacksmithBlessingAmount: 48
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 43
+            Bonus: 300
+            BlacksmithBlessingAmount: 49
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 44
+            Bonus: 300
+            BlacksmithBlessingAmount: 50
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 600
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 800
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 45
+            Bonus: 300
+            BlacksmithBlessingAmount: 51
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 46
+            Bonus: 300
+            BlacksmithBlessingAmount: 52
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 47
+            Bonus: 300
+            BlacksmithBlessingAmount: 53
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 48
+            Bonus: 300
+            BlacksmithBlessingAmount: 54
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 700
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 49
+            Bonus: 300
+            BlacksmithBlessingAmount: 55
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
+                Rate: 500
+                Price: 1000000
+                Material: Etel_Bradium
+                BreakingRate: 10000
+              - Type: HD
+                Rate: 600
+                Price: 1000000
+                Material: HD_Etel_Bradium
+                BreakingRate: 10000
+          - Level: 50
+            Bonus: 300
+            BlacksmithBlessingAmount: 56
+            BroadcastSuccess: true
+            BroadcastFailure: true
+            Chances:
+              - Type: Normal
                 Rate: 500
                 Price: 5000000
                 Material: Etel_Bradium
                 BreakingRate: 10000
               - Type: HD
-                Rate: 700
+                Rate: 500
                 Price: 5000000
                 Material: HD_Etel_Bradium
                 BreakingRate: 10000

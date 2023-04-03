@@ -2072,30 +2072,6 @@ Body:
       Sitting: true
     Script: |
       itemskill "MG_FROSTDIVER",1;
-  - Id: 6046
-    AegisName: Clothing_Dye_Coupon
-    Name: Clothing Dye Coupon
-    Type: Usable
-    Trade:
-      #NoDrop: true
-      #NoTrade: true
-      #NoSell: true
-      #NoCart: true
-      NoGuildStorage: true
-      #NoMail: true
-      #NoAuction: true
-  - Id: 6047
-    AegisName: Clothing_Dye_Coupon_II
-    Name: Clothing Dye Coupon II
-    Type: Usable
-    Trade:
-      #NoDrop: true
-      #NoTrade: true
-      #NoSell: true
-      #NoCart: true
-      NoGuildStorage: true
-      #NoMail: true
-      #NoAuction: true
   - Id: 6720
     AegisName: Status_Reset_Coupon
     Name: Status Reset Coupon
