@@ -541,6 +541,8 @@
 	export_constant(MF_NOPETCAPTURE);
 	export_constant(MF_NOBUYINGSTORE);
 	export_constant(MF_NODYNAMICNPC);
+	export_constant(MF_NOLOOTNORMALMOB);
+	export_constant(MF_NO_NPC_SELFDESTRUCTION_ON_ALL);
 
 	/* setcell types */
 	export_constant(CELL_WALKABLE);

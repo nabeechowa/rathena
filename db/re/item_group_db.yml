@@ -19044,7 +19044,7 @@ Body:
           - Item: Mental_Potion
             Rate: 1
             Amount: 2
-          - Item: Sealed_D_Lord_Scroll
+          - Item: Scroll_Sealed_Dark_Lord
             Rate: 1
   - Group: SUPPORT_PACKAGE_10
     SubGroups:
@@ -19062,7 +19062,7 @@ Body:
           - Item: Mental_Potion
             Rate: 1
             Amount: 20
-          - Item: Sealed_D_Lord_Scroll
+          - Item: Scroll_Sealed_Dark_Lord
             Rate: 1
             Amount: 11
   - Group: SUPPORT_PACKAGE_II

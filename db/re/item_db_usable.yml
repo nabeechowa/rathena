@@ -2090,7 +2090,7 @@ Body:
     Script: |
       resetstatus;
   - Id: 6721
-    AegisName: Status_Reset_Coupon_
+    AegisName: Status_Reset_Coupon2
     Name: Status Reset Coupon
     Type: Cash
     Buy: 10
@@ -2367,7 +2367,7 @@ Body:
     Script: |
       laphine_upgrade();
   - Id: 9894
-    AegisName: aegis_9894
+    AegisName: DF_Adrenaline_Scroll
     Name: "[Scroll] Adrenaline Lv.5 Scroll"
     Type: Delayconsume
     Buy: 2
@@ -2385,7 +2385,7 @@ Body:
     Script: |
       itemskill "BS_ADRENALINE",5;
   - Id: 9895
-    AegisName: aegis_9895
+    AegisName: DF_Abrasive
     Name: "[Scroll] Abrasive"
     Type: Usable
     Buy: 2
@@ -2423,7 +2423,7 @@ Body:
       specialeffect2 EF_POTION_BERSERK;
       sc_start SC_LIMIT_POWER_BOOSTER,1800000,30;
   - Id: 9909
-    AegisName: aegis_9909
+    AegisName: DF_Ex_Def_Potion
     Name: "[Scroll] Ex Def Potion"
     Type: Usable
     Buy: 2
@@ -3855,7 +3855,7 @@ Body:
     Script: |
       itemheal 1,1;
   - Id: 11588
-    AegisName: Fresh_Strawberries
+    AegisName: Strawberry_
     Name: Fresh Strawberries
     Type: Healing
     Buy: 10
@@ -3948,7 +3948,7 @@ Body:
     Type: Healing
     Buy: 10
   - Id: 11599
-    AegisName: Superstar_Potion
+    AegisName: superstar_potion
     Name: Superstar Potion
     Type: Healing
     Buy: 10
@@ -4075,7 +4075,7 @@ Body:
     Script: |
       itemheal rand(100,150),0;
   - Id: 11621
-    AegisName: Red_Syrup
+    AegisName: High_RedPotion
     Name: Red Syrup
     Type: Healing
     Buy: 800
@@ -4086,7 +4086,7 @@ Body:
     Script: |
       itemheal 325,0;
   - Id: 11622
-    AegisName: Yellow_Syrup
+    AegisName: High_YelloPotion
     Name: Yellow Syrup
     Type: Healing
     Buy: 1200
@@ -4097,7 +4097,7 @@ Body:
     Script: |
       itemheal 900,0;
   - Id: 11623
-    AegisName: White_Syrup
+    AegisName: High_WhitePotion
     Name: White Syrup
     Type: Healing
     Buy: 1500
@@ -4108,7 +4108,7 @@ Body:
     Script: |
       itemheal 1800,0;
   - Id: 11624
-    AegisName: Blue_Syrup
+    AegisName: High_BluePotion
     Name: Blue Syrup
     Type: Healing
     Buy: 7000
@@ -8399,7 +8399,7 @@ Body:
     Script: |
       itemskill "MC_LOUD",1;
   - Id: 12352
-    AegisName: Dun_Tele_Scroll3
+    AegisName: Dun_Tele_Scroll3_fr
     Name: Dungeon Teleport Scroll 3
     Type: Usable
     Weight: 10
@@ -13980,7 +13980,7 @@ Body:
       skilleffect "HP_ASSUMPTIO",0;
       sc_start SC_ASSUMPTIO,100000,5;
   - Id: 12863
-    AegisName: Treasure_Chest_Summoned_II
+    AegisName: Treasure_Box_Scroll2
     Name: Treasure Chest Summoned II
     Type: Usable
     Buy: 10
@@ -14125,7 +14125,7 @@ Body:
       specialeffect2 EF_BASH3D;
       sc_start SC_ALMIGHTY,1800000,10;
   - Id: 12884
-    AegisName: Infinite_Concentration_Potion
+    AegisName: Infinite_Center_Potion
     Name: Infinite Concentration Potion
     Type: Delayconsume
     Buy: 10
@@ -14141,7 +14141,7 @@ Body:
     Script: |
       sc_start SC_ASPDPOTION0,1800000,4;
   - Id: 12885
-    AegisName: Infinite_Awakening_Potion
+    AegisName: Ifn_Awakening_Potion
     Name: Infinite Awakening Potion
     Type: Delayconsume
     Buy: 10
@@ -14243,7 +14243,7 @@ Body:
     Buy: 10
     Weight: 200
   - Id: 12895
-    AegisName: Weapon_Box_Knuckle
+    AegisName: Weapon_Box_Fist
     Name: Weapon Box(Knuckle)
     Type: Usable
     Buy: 10
@@ -14267,7 +14267,7 @@ Body:
     Buy: 10
     Weight: 200
   - Id: 12899
-    AegisName: Weapon_Box_Staff
+    AegisName: Weapon_Box_Wand
     Name: Weapon Box(Staff)
     Type: Usable
     Buy: 10
@@ -16388,7 +16388,7 @@ Body:
     Script: |
       getitem 13560,1;
   - Id: 13521
-    AegisName: Hood_Card_Scroll_Box
+    AegisName: Garment_Card_Scroll_Box
     Name: Garment Card Pet Egg Scroll Box
     Type: Cash
     Buy: 20
@@ -16406,7 +16406,7 @@ Body:
     Script: |
       getitem 13561,1;
   - Id: 13522
-    AegisName: Hood_Card_Scroll_Box2
+    AegisName: Shield_Card_Scroll_Box
     Name: Shield Card Pet Egg Scroll Box
     Type: Cash
     Buy: 20
@@ -16460,7 +16460,7 @@ Body:
     Script: |
       getitem 13564,1;
   - Id: 13525
-    AegisName: Zeny_Scroll_Box
+    AegisName: Zeny_Card_Scroll_Box
     Name: Zeny Pet Egg Scroll Box
     Type: Cash
     Buy: 20
@@ -34474,7 +34474,7 @@ Body:
       #NoMail: true
       #NoAuction: true
   - Id: 14689
-    AegisName: Sealed_Kiel-D-01_Scroll
+    AegisName: Sealed_Kiel_Scroll
     Name: Sealed Kiel-D-01 Scroll
     Type: Cash
     Buy: 10
@@ -34861,7 +34861,7 @@ Body:
       /*TODO: Confirm the rates*/
       getitem callfunc("F_Rand",4482,6228,6232,24156,19935),1;
   - Id: 14740
-    AegisName: Sealed_Vesper_Scroll
+    AegisName: Sealed_Apo_H_Scroll
     Name: Sealed Vesper Scroll
     Type: Cash
     Buy: 10
@@ -34884,7 +34884,7 @@ Body:
     Script: |
       getgroupitem(IG_Imortal_Midgard_Scroll);
   - Id: 14753
-    AegisName: Hero_Midgard_Egg
+    AegisName: Hero_Midgard_Scroll
     Name: Hero Midgard Egg
     Type: Cash
     Weight: 10
@@ -34893,7 +34893,7 @@ Body:
     Script: |
       getgroupitem(IG_Hero_Midgard_Egg);
   - Id: 14758
-    AegisName: Safe_To_Smelting_Scroll
+    AegisName: Guarantee_Relax_Scroll
     Name: Safe To Smelting Scroll
     Type: Cash
     Buy: 10
@@ -34909,7 +34909,7 @@ Body:
     Script: |
       getitem callfunc("F_Rand",6238,6239,6228,6232,24216,17474,969),1;
   - Id: 14765
-    AegisName: Limited_Edition_JOB_Battle_Manual
+    AegisName: Job_Manual_Limit
     Name: Limited Edition JOB Battle Manual
     Type: Cash
     Buy: 10
@@ -36441,7 +36441,7 @@ Body:
     Flags:
       UniqueId: true
   - Id: 16250
-    AegisName: Valkyrie's_Gift_Box
+    AegisName: Valkyriee_Gift
     Name: Valkyrie's Gift Box
     Type: Cash
     Buy: 10
@@ -36493,7 +36493,7 @@ Body:
     Flags:
       UniqueId: true
   - Id: 16254
-    AegisName: Energizing_Potion_Box
+    AegisName: Acti_Potion_Box
     Name: Energizing Potion Box
     Type: Usable
     Buy: 20
@@ -36649,7 +36649,7 @@ Body:
     Script: |
       getitem 6225,5;
   - Id: 16264
-    AegisName: HD_Bradium_10_Box2
+    AegisName: F_HD_Bradium_Box10
     Name: HD Bradium 10 Box
     Type: Usable
     Buy: 20
@@ -36665,7 +36665,7 @@ Body:
     Script: |
       getitem 6226,10;
   - Id: 16265
-    AegisName: HD_Carnium_10_Box2
+    AegisName: F_HD_Carnium_Box10
     Name: HD Carnium 10 Box
     Type: Usable
     Buy: 20
@@ -36681,7 +36681,7 @@ Body:
     Script: |
       getitem 6225,10;
   - Id: 16266
-    AegisName: Indonesia_Beret_Box
+    AegisName: Idn_Inde_Beret_Box
     Name: Indonesia Beret Box
     Type: Cash
     Buy: 10
@@ -38297,7 +38297,7 @@ Body:
     Script: |
       getgroupitem(IG_F_CLOVER_BOX_MOUTH);
   - Id: 16374
-    AegisName: Mouth_Bubble_Gum_Box
+    AegisName: Bgum_Mouth_Box
     Name: Mouth Bubble Gum Box
     Type: Usable
     Buy: 20
@@ -38332,7 +38332,7 @@ Body:
     Script: |
       getgroupitem(IG_F_BGUM_BOX_IN_MOUTH);
   - Id: 16378
-    AegisName: Siege_Tele_Scroll_Box_30
+    AegisName: Siege_Scroll_Box30
     Name: Siege Teleport Scroll 30 Box
     Type: Cash
     Buy: 20
@@ -38348,7 +38348,7 @@ Body:
     Script: |
       getitem 14591,30;
   - Id: 16379
-    AegisName: Siege_Teleport_Scroll_Silver_10Box
+    AegisName: Tele_Scroll2_Box10
     Name: Siege Teleport Scroll Silver 10Box
     Type: Cash
     Buy: 10
@@ -38365,7 +38365,7 @@ Body:
     Script: |
       getitem 12415,10;
   - Id: 16380
-    AegisName: Siege_Teleport_Scroll_Silver_30Box
+    AegisName: S_Tele_Scroll2_Box30
     Name: Siege Teleport Scroll Silver 30Box
     Type: Cash
     Buy: 10
@@ -38382,7 +38382,7 @@ Body:
     Script: |
       getitem 12415,30;
   - Id: 16381
-    AegisName: WoE_Teleport_Scroll_100_Box
+    AegisName: F_Siege_Tele_10Sc_Box
     Name: WoE Teleport Scroll 100 Box
     Type: Usable
     Buy: 20
@@ -38398,7 +38398,7 @@ Body:
     Script: |
       getitem 12444,100;
   - Id: 16382
-    AegisName: WoE_Teleport_Scroll_30_Box
+    AegisName: F_Siege_Scroll_Box1_30
     Name: WoE Teleport Scroll 30 Box
     Type: Usable
     Buy: 20
@@ -38642,7 +38642,7 @@ Body:
     Script: |
       getitem 5599,1;
   - Id: 16398
-    AegisName: Virgo_Crown_Box_
+    AegisName: F_Virgo_Crown_Box
     Name: Virgo Crown Box
     Type: Cash
     Buy: 20
@@ -38658,7 +38658,7 @@ Body:
     Script: |
       getitem 5598,1;
   - Id: 16399
-    AegisName: Virgo_Diadem_Box_
+    AegisName: F_Virgo_Diadem_Box
     Name: Virgo Diadem Box
     Type: Cash
     Buy: 20
@@ -38674,7 +38674,7 @@ Body:
     Script: |
       getitem 5599,1;
   - Id: 16405
-    AegisName: Midgard_Coin_Box_
+    AegisName: Midgard_Coin_Box
     Name: Midgard Coin Box
     Type: Cash
     Buy: 20
@@ -38814,7 +38814,7 @@ Body:
     Script: |
       getitem 5611,1;
   - Id: 16418
-    AegisName: Giant_Fly_Wing_Box_500
+    AegisName: F_Giant_Fly_Wing_Box500
     Name: Giant Fly Wing Box 500
     Type: Usable
     Buy: 20
@@ -38822,7 +38822,7 @@ Body:
     Script: |
       getitem 12212,500;
   - Id: 16419
-    AegisName: Greed_Scroll_Box_30
+    AegisName: F_Greed_Box30
     Name: Greed Scroll Box 30
     Type: Usable
     Buy: 20
@@ -38830,7 +38830,7 @@ Body:
     Script: |
       getitem 14529,30;
   - Id: 16420
-    AegisName: Adventurer_Pack
+    AegisName: F_Pet_Egg_Scroll9
     Name: Adventurer Pack
     Type: Usable
     Buy: 20
@@ -38850,7 +38850,7 @@ Body:
       getitem 12449,10;
       getitem 12450,10;
   - Id: 16421
-    AegisName: Written_Oath_Of_Marriage_Box
+    AegisName: F_Marriage_Covenant_Box
     Name: Written Oath Of Marriage Box
     Type: Usable
     Buy: 20
@@ -38858,7 +38858,7 @@ Body:
     Script: |
       getitem 6026,1;
   - Id: 16422
-    AegisName: Magestic_Goat_Box_
+    AegisName: F_Magestic_Goat_Box
     Name: Magestic Goat Box
     Type: Usable
     Buy: 20
@@ -38866,7 +38866,7 @@ Body:
     Script: |
       rentitem 5280,604800;
   - Id: 16423
-    AegisName: Episode_13.1_Key_Package
+    AegisName: F_Pet_Egg_Scroll3
     Name: Episode 13.1 Key Package
     Type: Usable
     Buy: 20
@@ -38876,7 +38876,7 @@ Body:
       getitem 12208,2;
       getitem 14582,10;
   - Id: 16424
-    AegisName: Executioner_Box_
+    AegisName: F_Executioner_Box
     Name: Executioner Box
     Type: Usable
     Buy: 20
@@ -38884,7 +38884,7 @@ Body:
     Script: |
       rentitem 1174,604800;
   - Id: 16425
-    AegisName: Cutlus_Box
+    AegisName: F_Cutlas_Box
     Name: Cutlus Box
     Type: Usable
     Buy: 20
@@ -38892,7 +38892,7 @@ Body:
     Script: |
       rentitem 13402,604800;
   - Id: 16426
-    AegisName: Moonlight_Dagger_Box
+    AegisName: F_Moonlight_Sword_Box
     Name: Moonlight Dagger Box
     Type: Usable
     Buy: 20
@@ -38900,7 +38900,7 @@ Body:
     Script: |
       rentitem 13026,604800;
   - Id: 16427
-    AegisName: Wrench_Box
+    AegisName: F_Spanner_Box
     Name: Wrench Box
     Type: Usable
     Buy: 20
@@ -38908,7 +38908,7 @@ Body:
     Script: |
       rentitem 1534,604800;
   - Id: 16428
-    AegisName: Solar_Sword_Box_
+    AegisName: F_Solar_Sword_Box
     Name: Solar Sword Box
     Type: Usable
     Buy: 20
@@ -38916,7 +38916,7 @@ Body:
     Script: |
       rentitem 13403,604800;
   - Id: 16429
-    AegisName: Tomahawk_Box_
+    AegisName: F_Tomahawk_Box
     Name: Tomahawk Box
     Type: Usable
     Buy: 20
@@ -38924,7 +38924,7 @@ Body:
     Script: |
       rentitem 1374,604800;
   - Id: 16430
-    AegisName: Rudra_Bow_Box
+    AegisName: F_Bow_Of_Rudra_Box
     Name: Rudra Bow Box
     Type: Usable
     Buy: 20
@@ -38932,7 +38932,7 @@ Body:
     Script: |
       rentitem 1729,604800;
   - Id: 16431
-    AegisName: Pole_Axe_Box_
+    AegisName: F_Pole_Axe_Box
     Name: Pole Axe Box
     Type: Usable
     Buy: 20
@@ -39014,7 +39014,7 @@ Body:
     Script: |
       getitem 5662,1;
   - Id: 16437
-    AegisName: Libra_Crown_Box_
+    AegisName: FLibra_Crown_Box
     Name: Libra Crown Box
     Type: Cash
     Buy: 20
@@ -39032,7 +39032,7 @@ Body:
     Script: |
       getitem 5663,1;
   - Id: 16439
-    AegisName: Libra_Diadem_Box_
+    AegisName: FLibra_Diadem_Box
     Name: Libra Diadem Box
     Type: Cash
     Buy: 20
@@ -39096,7 +39096,7 @@ Body:
     Script: |
       getitem 5677,1;
   - Id: 16449
-    AegisName: Scorpio_Crown_Box_
+    AegisName: FScorpio_Crown_Box
     Name: Scorpio Crown Box
     Type: Cash
     Buy: 20
@@ -39150,7 +39150,7 @@ Body:
     Script: |
       getgroupitem(IG_Tw_Nov_Scroll);
   - Id: 16461
-    AegisName: Red_Wing_Hat_Box
+    AegisName: Redwing_Hat_Box
     Name: Red Wing Hat Box
     Type: Cash
     Buy: 20
@@ -39503,7 +39503,7 @@ Body:
     Script: |
       getitem 5740,1;
   - Id: 16550
-    AegisName: Sagittarius_Crown_Box_
+    AegisName: FSagittarius_Crown_Box
     Name: Sagittarius Crown Box
     Type: Cash
     Buy: 20
@@ -39511,7 +39511,7 @@ Body:
     Script: |
       getitem 5739,1;
   - Id: 16551
-    AegisName: Sagittarius_Diadem_Box_
+    AegisName: FSagittarius_Diadem_Box
     Name: Sagittarius Diadem Box
     Type: Cash
     Buy: 20
@@ -39519,7 +39519,7 @@ Body:
     Script: |
       getitem 5740,1;
   - Id: 16554
-    AegisName: Elven_Sunglasses_Box
+    AegisName: E_Elven_Sunglass_Box
     Name: Elven Sunglasses Box
     Type: Usable
     Buy: 20
@@ -39546,7 +39546,7 @@ Body:
       /*getgroupitem(IG_Pr_Reset_Stone_Box);*/
       getitem 6320,1;
   - Id: 16556
-    AegisName: FPremium_Reset_Stone_Box
+    AegisName: FPr_Reset_Stone_Box
     Name: Reset Stone Box
     Type: Usable
     Buy: 20
@@ -39619,7 +39619,7 @@ Body:
     Script: |
       getitem 14533,5;
   - Id: 16565
-    AegisName: Capricorn_Crown_Box
+    AegisName: Capricon_Crown_Box
     Name: Capricorn Crown Box
     Type: Cash
     Buy: 20
@@ -39629,7 +39629,7 @@ Body:
     Script: |
       getitem 5744,1;
   - Id: 16566
-    AegisName: Capricorn_Crown_Box_
+    AegisName: FCapricon_Crown_Box
     Name: Capricorn Crown Box
     Type: Cash
     Buy: 20
@@ -39637,7 +39637,7 @@ Body:
     Script: |
       getitem 5744,1;
   - Id: 16567
-    AegisName: Capricorn_Diadem_Box
+    AegisName: Capricon_Diadem_Box
     Name: Capricorn Diadem Box
     Type: Cash
     Buy: 20
@@ -39647,7 +39647,7 @@ Body:
     Script: |
       getitem 5745,1;
   - Id: 16568
-    AegisName: FCapricorn_Diadem_Box
+    AegisName: FCapricon_Diadem_Box
     Name: FCapricorn Diadem Box
     Type: Cash
     Buy: 20
@@ -50121,7 +50121,7 @@ Body:
     Script: |
       getgroupitem(IG_Level_Up_Box120);
   - Id: 22524
-    AegisName: Level_Up_Box130
+    AegisName: 130LVUP
     Name: Level Up Box(130)
     Type: Cash
     Buy: 10
@@ -50138,7 +50138,7 @@ Body:
     Script: |
       getgroupitem(IG_Level_Up_Box130);
   - Id: 22525
-    AegisName: Level_Up_Box140
+    AegisName: 140LVUP
     Name: Level Up Box(140)
     Type: Cash
     Buy: 10
@@ -50155,7 +50155,7 @@ Body:
     Script: |
       getgroupitem(IG_Level_Up_Box140);
   - Id: 22526
-    AegisName: Level_Up_Box150
+    AegisName: 150LVUP
     Name: Level Up Box(150)
     Type: Cash
     Buy: 10
@@ -50172,7 +50172,7 @@ Body:
     Script: |
       getgroupitem(IG_Level_Up_Box150);
   - Id: 22527
-    AegisName: Level_Up_Box160
+    AegisName: 160LVUP
     Name: Level Up Box(160)
     Type: Cash
     Buy: 10
@@ -50189,7 +50189,7 @@ Body:
     Script: |
       getgroupitem(IG_Level_Up_Box160);
   - Id: 22528
-    AegisName: Pet_Exchange_Ticket_Box
+    AegisName: Pet_Ticket_Box
     Name: Pet Exchange Ticket Box
     Type: Cash
     Buy: 10
@@ -50356,7 +50356,7 @@ Body:
     Script: |
       itemskill "RK_LUXANIMA",1;
   - Id: 22541
-    AegisName: PC_Room_Coupon_Box_VI
+    AegisName: PCBang_Coupon_Box6
     Name: PC Room Coupon Box VI
     Type: Cash
     Buy: 10
@@ -50612,7 +50612,7 @@ Body:
       getrandgroupitem(IG_FirstAid,1);
       getrandgroupitem(IG_FirstAid,1);
   - Id: 22555
-    AegisName: Gourmet_Chocolate
+    AegisName: HQ_Chocolate
     Name: Gourmet Chocolate
     Type: Healing
     Buy: 10
@@ -50621,7 +50621,7 @@ Body:
       #NoSell: true
       #NoCart: true
   - Id: 22556
-    AegisName: Luxury_Chocolate
+    AegisName: LuxuryChocolate
     Name: Luxury Chocolate
     Type: Healing
     Buy: 10
@@ -50630,7 +50630,7 @@ Body:
       #NoSell: true
       #NoCart: true
   - Id: 22557
-    AegisName: Masterpieces_of_Artisan_Chocolate
+    AegisName: ArtisanChocolate
     Name: Masterpieces of Artisan Chocolate
     Type: Healing
     Buy: 10
@@ -50698,7 +50698,7 @@ Body:
     # Script: |
       # mercenary_create 3087,1800000;
   - Id: 22569
-    AegisName: Gift_New_start
+    AegisName: Kings_Gift2
     Name: Gift New start
     Type: Cash
     Buy: 10
@@ -50742,7 +50742,7 @@ Body:
     Buy: 10
     Weight: 10
   - Id: 22610
-    AegisName: New_Beginnings_Box
+    AegisName: Beginning_Box
     Name: New Beginnings Box
     Type: Usable
     Buy: 10
@@ -50801,7 +50801,7 @@ Body:
       showscript "Yeah! Zombie night! Yeah!!";
 #      transform 1015,60000,SC_GLASTHEIM_TRANS;  /* todo */
   - Id: 22613
-    AegisName: Contaminated_Reagents
+    AegisName: Polluted_Potion
     Name: Contaminated Reagents
     Type: Delayconsume
     Buy: 10
@@ -50826,7 +50826,7 @@ Body:
       sc_start SC_EXPBOOST,8640000,50;
       sc_start SC_ITEMBOOST,8640000,100;
   - Id: 22617
-    AegisName: Clear_Box_S
+    AegisName: ClearBox_S
     Name: Clear Box S
     Type: Cash
     Buy: 10
@@ -50840,7 +50840,7 @@ Body:
       #NoMail: true
       #NoAuction: true
   - Id: 22618
-    AegisName: Clear_Box_A
+    AegisName: ClearBox_A
     Name: Clear Box A
     Type: Cash
     Buy: 10
@@ -50888,7 +50888,7 @@ Body:
       sc_start SC_JP_EVENT04,300000,25;
       percentheal 5,5;
   - Id: 22623
-    AegisName: New_Start_Box
+    AegisName: Beginning_Box2
     Name: New Start Box
     Type: Cash
     Buy: 10
@@ -50919,7 +50919,7 @@ Body:
     Script: |
       sc_start SC_OKTOBERFEST,600000,0;
   - Id: 22626
-    AegisName: January_Gift_Box
+    AegisName: JanuaryGiftBox_
     Name: January Gift Box
     Type: Usable
     Weight: 100
@@ -50934,7 +50934,7 @@ Body:
     Script: |
       rentitem 19052,604800;
   - Id: 22627
-    AegisName: February_Gift_Box
+    AegisName: FebruaryGiftBox_
     Name: February Gift Box
     Type: Usable
     Weight: 100
@@ -51110,7 +51110,7 @@ Body:
     Script: |
       getitem callfunc("F_Rand",603,6230,6234/*,Angeling Balloon*/),1;
   - Id: 22652
-    AegisName: Briliant_Hat_Box
+    AegisName: Brilliant_Hat_Box
     Name: Brilliant Hat Box
     Type: Usable
     Buy: 10
@@ -51134,7 +51134,7 @@ Body:
     Script: |
       /* TODO */
   - Id: 22657
-    AegisName: Honey_Songpyun_
+    AegisName: Honey_Rice_Cake_
     Name: Honey Songpyun
     Type: Healing
     Buy: 20
@@ -51200,7 +51200,7 @@ Body:
          warp "niflheim",347,255;
       }
   - Id: 22671
-    AegisName: March_Gift_Box
+    AegisName: MarchGiftBox_
     Name: March Gift Box
     Type: Usable
     Buy: 10
@@ -51216,7 +51216,7 @@ Body:
     Script: |
       /*2 Lucky Eggs*/
   - Id: 22672
-    AegisName: April_Gift_Box
+    AegisName: AprilGiftBox_
     Name: April Gift Box
     Type: Usable
     Buy: 10
@@ -51232,7 +51232,7 @@ Body:
     Script: |
       rentitem callfunc("F_Rand",2566,2856,2857,15023),1209600;
   - Id: 22673
-    AegisName: May_Gift_Box
+    AegisName: MayGiftBox_
     Name: May Gift Box
     Type: Usable
     Buy: 10
@@ -51248,7 +51248,7 @@ Body:
     Script: |
       getitem 22777,2;
   - Id: 22674
-    AegisName: June_Gift_Box
+    AegisName: JuneGiftBox_
     Name: June Gift Box
     Type: Usable
     Buy: 10
@@ -51264,7 +51264,7 @@ Body:
     Script: |
       /*1 Potion Box*/
   - Id: 22675
-    AegisName: Mysterious_Scroll
+    AegisName: Mystery_Scroll
     Name: Mysterious Scroll
     Type: Usable
     Buy: 20
@@ -51272,7 +51272,7 @@ Body:
     Script: |
       sc_start SC_INTFOOD,3600000,30;
   - Id: 22676
-    AegisName: Hangul_Day_Event_Box
+    AegisName: HangulDay_Box
     Name: Hangul Day Event Box
     Type: Usable
     Buy: 20
@@ -51409,7 +51409,7 @@ Body:
       bonus_script "bonus bFlee,100;",5,9;
       sc_start SC_BLIND,5000,0,10000,0;
   - Id: 22700
-    AegisName: Jumping_Support_Box
+    AegisName: Jumping_Kit_Box
     Name: Jumping Support Box
     Type: Cash
     Buy: 10
@@ -51485,14 +51485,14 @@ Body:
     Script: |
       getgroupitem(IG_PITAPAT_BOX);
   - Id: 22721
-    AegisName: "?_Box"
+    AegisName: Question_Box
     Name: "? Box"
     Type: Cash
     Buy: 10
     Script: |
       /*No clue the random item yet*/
   - Id: 22734
-    AegisName: Revolution_Quiz_Box
+    AegisName: QuizRevol_Box
     Name: Revolution Quiz Box
     Type: Cash
     Buy: 10
@@ -51511,7 +51511,7 @@ Body:
       getitem 6423,1;
       /*1x Enchanted Letter Introduction*/
   - Id: 22735
-    AegisName: Sealed_Moonlight_Flower_Scroll
+    AegisName: Sealed_M_Flower_Scroll
     Name: Sealed Moonlight Flower Scroll
     Type: Cash
     Buy: 10
@@ -51528,7 +51528,7 @@ Body:
       /*TODO: Confirm the rates*/
       getitem callfunc("F_Rand",6228,6232,24150,19934,6635,17474),1;
   - Id: 22736
-    AegisName: July_Gift_Box
+    AegisName: JulyGiftBox_
     Name: July Gift Box
     Type: Usable
     Buy: 10
@@ -51648,7 +51648,7 @@ Body:
     Script: |
       getitem 13220,500;
   - Id: 22750
-    AegisName: Trans_Scroll_Horn_Scaraba
+    AegisName: Trans_Scroll_Sca
     Name: Transformation Scroll(Horn Scaraba)
     Type: Usable
     Buy: 10
@@ -51656,7 +51656,7 @@ Body:
     Script: |
       transform 2161,1200000,SC_MTF_ASPD2,2,10;
   - Id: 22751
-    AegisName: Trans_Scroll_Wanderer
+    AegisName: Trans_Scroll_Wander
     Name: Transformation Scroll(Wanderer)
     Type: Usable
     Buy: 10
@@ -51672,7 +51672,7 @@ Body:
     Script: |
       transform 1778,1200000,SC_MTF_RANGEATK2,30;
   - Id: 22753
-    AegisName: Trans_Scroll_Kobold_Archer
+    AegisName: Trans_Scroll_Karcher
     Name: Transformation Scroll(Kobold Archer)
     Type: Usable
     Buy: 10
@@ -51680,7 +51680,7 @@ Body:
     Script: |
       transform 1282,1200000,SC_MTF_RANGEATK2,30;
   - Id: 22754
-    AegisName: Trans_Scroll_Necromancer
+    AegisName: Trans_Scroll_Necro
     Name: Transformation Scroll(Necromancer)
     Type: Usable
     Buy: 10
@@ -51688,7 +51688,7 @@ Body:
     Script: |
       transform 1870,1200000,SC_MTF_RANGEATK2,30;
   - Id: 22755
-    AegisName: Trans_Scroll_Wind_Ghost
+    AegisName: Trans_Scroll_Wghost
     Name: Transformation Scroll(Wind Ghost)
     Type: Usable
     Buy: 10
@@ -51696,7 +51696,7 @@ Body:
     Script: |
       transform 1263,1200000,SC_MTF_MATK2,50;
   - Id: 22756
-    AegisName: August_Gift_Box
+    AegisName: AugustGiftBox_
     Name: August Gift Box
     Type: Usable
     Buy: 10
@@ -51712,7 +51712,7 @@ Body:
     Script: |
       getitem 12246,1;
   - Id: 22757
-    AegisName: Collection_Of_Scrolls_Magical_Transformation
+    AegisName: Matk_Trans_Scroll
     Name: Collection Of Scrolls Magical Transformation
     Type: Cash
     Buy: 10
@@ -51721,7 +51721,7 @@ Body:
       getitem 22755,1;
       getitem 22754,1;
   - Id: 22758
-    AegisName: Collection_Of_Scrolls_Shooting_Transformation
+    AegisName: Ratk_Trans_Scroll
     Name: Collection Of Scrolls Shooting Transformation
     Type: Cash
     Buy: 10
@@ -51730,7 +51730,7 @@ Body:
       getitem 22753,1;
       getitem 22752,1;
   - Id: 22759
-    AegisName: Collection_Of_Scrolls_Attack_Speed_Transformation
+    AegisName: Aspd_Trans_Scroll
     Name: Collection Of Scrolls Attack Speed Transformation
     Type: Cash
     Buy: 10
@@ -51738,7 +51738,7 @@ Body:
       getitem 22751,1;
       getitem 22750,1;
   - Id: 22760
-    AegisName: Argiope_Transportin
+    AegisName: Argiope_CaptureBox
     Name: Argiope Transportin
     Type: Usable
     Buy: 10
@@ -51754,7 +51754,7 @@ Body:
     Script: |
       /*No Info*/
   - Id: 22761
-    AegisName: Luciola_Vespa_Transportin
+    AegisName: LuciolaVespa_CaptureBox
     Name: Luciola Vespa Transportin
     Type: Usable
     Buy: 10
@@ -51770,7 +51770,7 @@ Body:
     Script: |
       /*No Info*/
   - Id: 22762
-    AegisName: Centipede_Transportin
+    AegisName: Centipede_CaptureBox
     Name: Centipede Transportin
     Type: Usable
     Buy: 10
@@ -51804,7 +51804,7 @@ Body:
       /*TODO: Confirm the allowed pet_id and chance*/
       getitem callfunc("F_Rand",6116,6117,6118,6129,6130,6130,6132,6133,6134,6135,6136,6137,6138,6139,6140,6141,6142,6143),1;
   - Id: 22770
-    AegisName: Shark_Skewer
+    AegisName: Shark_Skewered
     Name: Shark Skewer
     Type: Healing
     Buy: 10
@@ -51814,7 +51814,7 @@ Body:
     Script: |
       /*No Info*/
   - Id: 22771
-    AegisName: Bluefin_Tuna_Skewer
+    AegisName: Tuna_Skewered
     Name: Bluefin Tuna Skewer
     Type: Healing
     Buy: 10
@@ -51824,7 +51824,7 @@ Body:
     Script: |
       sc_start SC_INCATKRATE,5000,30;
   - Id: 22772
-    AegisName: Sea_Bream_Skewer
+    AegisName: Snapper_Skwered
     Name: Sea Bream Skewer
     Type: Healing
     Buy: 10
@@ -51834,7 +51834,7 @@ Body:
     Script: |
       sc_start SC_INCMATKRATE,5000,30;
   - Id: 22773
-    AegisName: Piranha_Skewer
+    AegisName: Piranha_Skewered
     Name: Piranha Skewer
     Type: Healing
     Buy: 10
@@ -51844,7 +51844,7 @@ Body:
     Script: |
       sc_start SC_ASPDPOTION0,5000,5;
   - Id: 22774
-    AegisName: Salmon_Skewer
+    AegisName: Salmon_Skewered
     Name: Salmon Skewer
     Type: Healing
     Buy: 10
@@ -51854,7 +51854,7 @@ Body:
     Script: |
       sc_start SC_SPEEDUP0,5000,25;
   - Id: 22775
-    AegisName: Eels_Skewer
+    AegisName: Eel_Skewered
     Name: Eels Skewer
     Type: Healing
     Buy: 10
@@ -51864,7 +51864,7 @@ Body:
     Script: |
       sc_start SC_DEF_RATE,5000,30;
   - Id: 22776
-    AegisName: Carp_Skewer
+    AegisName: Carp_Skewered
     Name: Carp Skewer
     Type: Healing
     Buy: 10
@@ -51874,7 +51874,7 @@ Body:
     Script: |
       sc_start SC_MDEF_RATE,5000,30;
   - Id: 22777
-    AegisName: Gift_Buff_Set
+    AegisName: BuffGiftBox
     Name: Gift Buff Set
     Type: Usable
     Buy: 10
@@ -51891,7 +51891,7 @@ Body:
     Script: |
       getgroupitem(IG_Gift_Buff_Set);
   - Id: 22781
-    AegisName: PC_Bang_Normal_Box
+    AegisName: PC_NomalBox
     Name: PC Bang Normal Box
     Type: Usable
     Buy: 10
@@ -51909,7 +51909,7 @@ Body:
       getitem 547,20;
       /*No Info*/
   - Id: 22782
-    AegisName: PC_Bang_Wooden_Box
+    AegisName: PC_WoodenBox
     Name: PC Bang Wooden Box
     Type: Usable
     Buy: 10
@@ -51927,7 +51927,7 @@ Body:
       getitem 547,30;
       /*No Info*/
   - Id: 22783
-    AegisName: PC_Bang_Golden_Box
+    AegisName: PC_GoldenBox
     Name: PC Bang Golden Box
     Type: Usable
     Buy: 10
@@ -51946,7 +51946,7 @@ Body:
       getitem 985,10;
       /*No Info*/
   - Id: 22784
-    AegisName: PC_Bang_Platinum_Box
+    AegisName: PC_PlatinumBox
     Name: PC Bang Platinum Box
     Type: Usable
     Buy: 10
@@ -52004,7 +52004,7 @@ Body:
     Script: |
       getitem callfunc("F_Rand",6228,6232,22813,19937,17314, 6635),1;
   - Id: 22813
-    AegisName: Bearer's_Shadow_Box
+    AegisName: Bearers_Shadow_Box
     Name: Bearer's Shadow Box
     Type: Usable
     Buy: 10
@@ -52143,7 +52143,7 @@ Body:
       sc_start SC_2011RWC_SCROLL,3600000,0;
       sc_start SC_SPEEDUP0,600000,25;
   - Id: 22822
-    AegisName: Summer_Vacation_Costumes
+    AegisName: SW_Wear2014
     Name: Summer Vacation Costumes
     Type: Usable
     Weight: 100
@@ -52151,7 +52151,7 @@ Body:
     Script: |
       sc_start SC_DRESSUP,600000,1;
   - Id: 22823
-    AegisName: Sealed_Sniper_Scroll
+    AegisName: Sealed_B_Shecil_Scroll
     Name: Sealed Sniper Scroll
     Type: Usable
     Buy: 10
@@ -52229,7 +52229,7 @@ Body:
     Script: |
       getitem callfunc("F_Rand",4488,4497,4486,4480,4485,4539,4487,4494,4538,4489,4490,4482,4503,4483,4491),1;
   - Id: 22837
-    AegisName: Integer_Time
+    AegisName: Essence_Of_Time
     Name: Integer Time
     Type: Usable
     Buy: 10
@@ -52265,7 +52265,7 @@ Body:
     Script: |
       getgroupitem(IG_Happy_Box_J);
   - Id: 22842
-    AegisName: Sealed_Dracula_Scroll_II
+    AegisName: Sealed_Dracula_Scroll2
     Name: Sealed Dracula Scroll II
     Type: Usable
     Buy: 10
@@ -52282,7 +52282,7 @@ Body:
     Script: |
       getitem callfunc("F_Rand",22846,6228,6232,24223,24227,17474/*, Enchant Letter*/),1;
   - Id: 22843
-    AegisName: Superstar_Snack
+    AegisName: superstar_cake
     Name: Superstar Snack
     Type: Usable
     Buy: 10
@@ -52290,7 +52290,7 @@ Body:
     Script: |
       bonus_script "{ bonus bAtk2,50; bonus bMatk,50; }",300;
   - Id: 22844
-    AegisName: Sealed_Dracula_Card_Album
+    AegisName: Sealed_Dracula_Album
     Name: Sealed Dracula Card Album
     Type: Usable
     Buy: 10
@@ -52308,7 +52308,7 @@ Body:
     Script: |
       /*No Info*/
   - Id: 22845
-    AegisName: Sealed_Fortune_Egg
+    AegisName: Sealed_Mysterious_Egg
     Name: Sealed Fortune Egg
     Type: Usable
     Buy: 10
@@ -52370,7 +52370,7 @@ Body:
     Script: |
       warp "prt_q",155,27;
   - Id: 22850
-    AegisName: January_Gift_Box_
+    AegisName: JanuaryGiftBox
     Name: January Gift Box
     Type: Usable
     Buy: 10
@@ -52386,7 +52386,7 @@ Body:
     Script: |
       rentitem 19052,604800;
   - Id: 22851
-    AegisName: February_Gift_Box_
+    AegisName: FebruaryGiftBox
     Name: February Gift Box
     Type: Usable
     Buy: 10
@@ -52402,7 +52402,7 @@ Body:
     Script: |
       getitem 12105,2;
   - Id: 22852
-    AegisName: March_Gift_Box_
+    AegisName: MarchGiftBox
     Name: March Gift Box
     Type: Usable
     Buy: 10
@@ -52418,7 +52418,7 @@ Body:
     Script: |
       /*2 Lucky Eggs*/
   - Id: 22853
-    AegisName: April_Gift_Box_
+    AegisName: AprilGiftBox
     Name: April Gift Box
     Type: Usable
     Buy: 10
@@ -52434,7 +52434,7 @@ Body:
     Script: |
       rentitem callfunc("F_Rand",2566,2856,2857,15023),1209600;
   - Id: 22854
-    AegisName: May_Gift_Box_
+    AegisName: MayGiftBox
     Name: May Gift Box
     Type: Usable
     Buy: 10
@@ -52450,7 +52450,7 @@ Body:
     Script: |
       getitem 22777,2;
   - Id: 22855
-    AegisName: June_Gift_Box_
+    AegisName: JuneGiftBox
     Name: June Gift Box
     Type: Usable
     Buy: 10
@@ -52466,7 +52466,7 @@ Body:
     Script: |
       /*1 Potion Box*/
   - Id: 22856
-    AegisName: July_Gift_Box_
+    AegisName: JulyGiftBox
     Name: July Gift Box
     Type: Usable
     Buy: 10
@@ -52482,7 +52482,7 @@ Body:
     Script: |
       getitem 20212,1;
   - Id: 22857
-    AegisName: August_Gift_Box_
+    AegisName: AugustGiftBox
     Name: August Gift Box
     Type: Usable
     Buy: 10
@@ -52498,7 +52498,7 @@ Body:
     Script: |
       getitem 12246,1;
   - Id: 22858
-    AegisName: September_Gift_Box
+    AegisName: SeptemberGiftBox
     Name: September Gift Box
     Type: Usable
     Buy: 10
@@ -52514,7 +52514,7 @@ Body:
     Script: |
       /*2 Lucky Eggs*/
   - Id: 22859
-    AegisName: October_Gift_Box
+    AegisName: OctoberGiftBox
     Name: October Gift Box
     Type: Usable
     Buy: 10
@@ -52530,7 +52530,7 @@ Body:
     Script: |
       getitem 12529,5;
   - Id: 22860
-    AegisName: November_Gift_Box
+    AegisName: NovemberGiftBox
     Name: November Gift Box
     Type: Usable
     Buy: 10
@@ -52546,7 +52546,7 @@ Body:
     Script: |
       rentitem callfunc("F_Rand",2566,2856,2857,15023),1209600;
   - Id: 22861
-    AegisName: December_Gift_Box
+    AegisName: DecemberGiftBox
     Name: December Gift Box
     Type: Usable
     Buy: 10
@@ -52571,7 +52571,7 @@ Body:
     Script: |
       getgroupitem(IG_Enchant_Stone_Box5);
   - Id: 22869
-    AegisName: Lucky_Roulette_Tickets
+    AegisName: LuckyRouletteTickets
     Name: Lucky Roulette Ticket
     Type: Usable
     Buy: 10
@@ -52605,7 +52605,7 @@ Body:
     Script: |
       getgroupitem(IG_XMAS_PACKAGE_14);
   - Id: 22873
-    AegisName: Sealed_Beelzebub_Scroll_II
+    AegisName: Sealed_Berz_Scroll2
     Name: Sealed Beelzebub Scroll II
     Type: Usable
     Buy: 10
@@ -52621,7 +52621,7 @@ Body:
     Script: |
       getitem callfunc("F_Rand",22875,6238,6239,6228,6232,24231,24232,17474,6635),1;
   - Id: 22874
-    AegisName: Sealed_Beelzebub_Card_Album
+    AegisName: Sealed_Berz_Album
     Name: Sealed Beelzebub Card Album
     Type: Usable
     Buy: 10
@@ -52666,7 +52666,7 @@ Body:
     Script: |
       percentheal 10,10;
   - Id: 22883
-    AegisName: September_Gift_Box_
+    AegisName: SeptemberGiftBox_
     Name: September Gift Box
     Type: Usable
     Buy: 10
@@ -52682,7 +52682,7 @@ Body:
     Script: |
       /*2 Lucky Eggs*/
   - Id: 22884
-    AegisName: October_Gift_Box_
+    AegisName: OctoberGiftBox_
     Name: October Gift Box
     Type: Usable
     Buy: 10
@@ -52698,7 +52698,7 @@ Body:
     Script: |
       getitem 12529,5;
   - Id: 22885
-    AegisName: November_Gift_Box_
+    AegisName: NovemberGiftBox_
     Name: November Gift Box
     Type: Usable
     Buy: 10
@@ -52714,7 +52714,7 @@ Body:
     Script: |
       rentitem callfunc("F_Rand",2566,2856,2857,15023),1209600;
   - Id: 22886
-    AegisName: December_Gift_Box_
+    AegisName: DecemberGiftBox_
     Name: December Gift Box
     Type: Usable
     Buy: 10
@@ -52730,7 +52730,7 @@ Body:
     Script: |
       getitem 22869,10;
   - Id: 22887
-    AegisName: PC-Room_Box
+    AegisName: 2015GoldPCBox
     Name: PC-Room Box
     Type: Usable
     Buy: 20
@@ -52780,7 +52780,7 @@ Body:
     Script: |
       /*Get a random Shadow Equip (No info which one)*/
   - Id: 22894
-    AegisName: Limited_2015_Neuralizer
+    AegisName: 2015LI_Neuralizer
     Name: (Limited)2015 Neuralizer
     Type: Usable
     Buy: 20
@@ -52796,7 +52796,7 @@ Body:
     Script: |
       callfunc "F_CashReset";
   - Id: 22895
-    AegisName: Limited_2015_Status_Initialization_Volume
+    AegisName: 2015LI_R_S_C
     Name: (Limited)2015 Status Initialization Volume
     Type: Usable
     Buy: 20
@@ -52812,7 +52812,7 @@ Body:
     Script: |
       /*Works like item 6320, can reset up to 3x within 1 hour*/
   - Id: 22896
-    AegisName: Limited_Old_Status_Initialization_Volume
+    AegisName: 2015LI_R_S_C_
     Name: (Limited)Old Status Initialization Volume
     Type: Usable
     Buy: 20
@@ -53980,7 +53980,7 @@ Body:
       percentheal 10,10;
       itemskill "HP_ASSUMPTIO",3;
   - Id: 23080
-    AegisName: Cursed_Crystal
+    AegisName: Crystal_Of_Grudge
     Name: Cursed Crystal
     Type: Usable
     Buy: 1
@@ -54595,7 +54595,7 @@ Body:
     Script: |
       getgroupitem(IG_KAFRA_SCROLL);
   - Id: 23177
-    AegisName: Kafra_Card_
+    AegisName: Comp_Kafra_Card
     Name: Kafra Card
     Type: Usable
     Buy: 2
@@ -54642,7 +54642,7 @@ Body:
     Script: |
       pet 1622;
   - Id: 23191
-    AegisName: Varetyr_Spear_Scroll_1_5
+    AegisName: Varetyr_5_Scroll
     Name: Level 5 Varetyr Spear
     Type: Delayconsume
     Buy: 10
@@ -54650,7 +54650,7 @@ Body:
     Script: |
       itemskill "SO_VARETYR_SPEAR",5;
   - Id: 23192
-    AegisName: Diamond_Dust_Scroll_1_5
+    AegisName: DiamondDust5_Scroll
     Name: Level 5 Diamond Dust
     Type: Delayconsume
     Buy: 10
@@ -54658,7 +54658,7 @@ Body:
     Script: |
       itemskill "SO_DIAMONDDUST",5;
   - Id: 23193
-    AegisName: Crimson_Rock_Scroll_1_5
+    AegisName: CrimsonRock_5_Scroll
     Name: Level 5 Crimson Rock
     Type: Delayconsume
     Buy: 10
@@ -54666,7 +54666,7 @@ Body:
     Script: |
       itemskill "WL_CRIMSONROCK",5;
   - Id: 23194
-    AegisName: Sienna_Execrate_Scroll_1_5
+    AegisName: Sienna_5_Scroll
     Name: Level 5 Sienna Execrate
     Type: Delayconsume
     Buy: 10
@@ -55507,7 +55507,7 @@ Body:
     Script: |
       duplicate_dynamic("Shorty#fgtg01");
   - Id: 23280
-    AegisName: N_Fly_Wing_
+    AegisName: N_Fly_Wing2
     Name: Novice Fly Wing
     Type: Delayconsume
     Buy: 10
@@ -55598,7 +55598,7 @@ Body:
       getitem 23291,1;
       getitem 20844,1;
   - Id: 23288
-    AegisName: Compressed_Wing_Of_Fly
+    AegisName: Cps_Fly_Wing
     Name: Compressed Fly Wing
     Type: Delayconsume
     Buy: 1000
@@ -60214,7 +60214,7 @@ Body:
     Script: |
       getitem "Soul_Cannon_Ball",500;
   - Id: 100174
-    AegisName: Poison_Arrow_Container
+    AegisName: Poi_Arrow_Container
     Name: Poison Arrow Quiver
     Type: Usable
     Buy: 20
@@ -60238,7 +60238,7 @@ Body:
     Script: |
       getitem "Holy_Cannon_Ball",500;
   - Id: 100178
-    AegisName: aegis_100178
+    AegisName: Cannon_Box_6
     Name: Liquid Condensed Bullet Box
     Type: Usable
     Buy: 20
@@ -60374,7 +60374,7 @@ Body:
     Script: |
       getitem "Red_Gemstone",500;
   - Id: 100195
-    AegisName: aegis_100195
+    AegisName: Bullet_Case_Full
     Name: Full Metal Jacket Cartridge
     Type: Usable
     Buy: 20
@@ -60382,7 +60382,7 @@ Body:
     Script: |
       getitem "Full_Metal_Jacket",500;
   - Id: 100196
-    AegisName: aegis_100196
+    AegisName: Bullet_Case_Mine
     Name: Projection Landmine Cartridge
     Type: Usable
     Buy: 20
@@ -60390,7 +60390,7 @@ Body:
     Script: |
       getitem "Shooting_Mine",500;
   - Id: 100197
-    AegisName: aegis_100197
+    AegisName: Bullet_Case_Tail
     Name: Dragon Tail Missile Cartridge
     Type: Usable
     Buy: 20
@@ -61162,7 +61162,7 @@ Body:
     Script: |
       laphine_upgrade();
   - Id: 100371
-    AegisName: aegis_100371
+    AegisName: Homun_F_Tablet
     Name: Homunculus Nutritional Supplement
     Type: Usable
     Weight: 10
@@ -61506,7 +61506,7 @@ Body:
     Script: |
       laphine_upgrade();
   - Id: 100424
-    AegisName: S_Labyrinth_Box_IL
+    AegisName: S_Teddy_Labyrinth_IL
     Name: Special Labyrinth Refine Box
     Type: DelayConsume
     Weight: 10
@@ -61622,42 +61622,42 @@ Body:
     Script: |
       getgroupitem(IG_NEW_S_PENDANT_CUBE);
   - Id: 100452
-    AegisName: Minus_POW
+    AegisName: Minus_Pow
     Name: POW Reduction Potion
     Type: Delayconsume
     Buy: 10
     Script: |
       callfunc "F_CashReduceTraitStat",bPow,-1,100452;
   - Id: 100453
-    AegisName: Minus_SPL
+    AegisName: Minus_Spl
     Name: SPL Reduction Potion
     Type: Delayconsume
     Buy: 10
     Script: |
       callfunc "F_CashReduceTraitStat",bSpl,-1,100453;
   - Id: 100454
-    AegisName: Minus_STA
+    AegisName: Minus_Sta
     Name: STA Reduction Potion
     Type: Delayconsume
     Buy: 10
     Script: |
       callfunc "F_CashReduceTraitStat",bSta,-1,100454;
   - Id: 100455
-    AegisName: Minus_WIS
+    AegisName: Minus_Wis
     Name: WIS Reduction Potion
     Type: Delayconsume
     Buy: 10
     Script: |
       callfunc "F_CashReduceTraitStat",bWis,-1,100455;
   - Id: 100456
-    AegisName: Minus_CON
+    AegisName: Minus_Con
     Name: CON Reduction Potion
     Type: Delayconsume
     Buy: 10
     Script: |
       callfunc "F_CashReduceTraitStat",bCon,-1,100456;
   - Id: 100457
-    AegisName: Minus_CRT
+    AegisName: Minus_Crt
     Name: CRT Reduction Potion
     Type: Delayconsume
     Buy: 10
@@ -62808,7 +62808,7 @@ Body:
     Script: |
       getgroupitem(IG_C_WING_OF_FLY_3DAY_B__);
   - Id: 100880
-    AegisName: aegis_100880
+    AegisName: S_Piercing_Box
     Name: Piercing Shadow Box
     Type: Usable
     Weight: 10
@@ -62924,7 +62924,7 @@ Body:
     Script: |
       warp "rebel_in",100,40;
   - Id: 100908
-    AegisName: aegis_100908
+    AegisName: S_M_Piercing_Box
     Name: Magic Piercing Shadow Box
     Type: Usable
     Weight: 10
@@ -64941,7 +64941,7 @@ Body:
     Script: |
       getitem 1000569,500;
   - Id: 101126
-    AegisName: aegis_101126
+    AegisName: DF_Halloween_Candy
     Name: "[Scroll] Halloween Candy"
     Type: Healing
     Weight: 10
@@ -67014,7 +67014,7 @@ Body:
     Script: |
       itemheal rand(2730,2750),0;
   - Id: 1100006
-    AegisName: aegis_1100006
+    AegisName: Ep19_Dry_Icegangu
     Name: Dried Ice Gangu
     Type: Healing
     Buy: 10

@@ -37990,7 +37990,7 @@ Body:
         - Level: 5
           Amount: 70
       ItemCost:
-        - Item: Device_Creation_Guide
+        - Item: Device_M_Book
           Amount: 0
   - Id: 5298
     Name: MT_A_MACHINE
@@ -38380,7 +38380,7 @@ Body:
     Hit: Single
     HitCount: 2
     Element: Weapon
-    SplashArea: 3
+    SplashArea: 4
     CastCancel: true
     AfterCastActDelay: 500
     Duration1:
@@ -38868,7 +38868,7 @@ Body:
     Requires:
       SpCost: 5
       ItemCost:
-        - Item: Hawk_Flute
+        - Item: Hawk_Pipe
           Amount: 0
   - Id: 5328
     Name: WH_CALAMITYGALE

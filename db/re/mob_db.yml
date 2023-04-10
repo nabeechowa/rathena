@@ -1220,6 +1220,8 @@ Body:
     Drops:
       - Item: Danggie
         Rate: 4500
+      - Item: Munak_Doll
+        Rate: 6
       - Item: Munak_Turban
         Rate: 1
       - Item: Shoes_
@@ -96206,7 +96208,7 @@ Body:
         Rate: 700
       - Item: Shadowdecon_Ore
         Rate: 80
-      - Item: Lava_Leather_Suit
+      - Item: Lava_Leather_Suits
         Rate: 50
         RandomOptionGroup: MAGMA3
       - Item: Lava_Leather_Shoes
@@ -96214,7 +96216,7 @@ Body:
         RandomOptionGroup: MAGMA3
       - Item: Magma_Essence
         Rate: 5
-      - Item: Rigid_Blazer_Card
+      - Item: Firm_Blazzer_Card
         Rate: 1
         StealProtected: true
   - Id: 20373
@@ -96262,7 +96264,7 @@ Body:
         Rate: 5
       - Item: Zelunium_Ore
         Rate: 80
-      - Item: Rigid_Nightmare_Terror_Card
+      - Item: Firm_Nightmare_T_Card
         Rate: 1
         StealProtected: true
   - Id: 20374
@@ -96310,7 +96312,7 @@ Body:
         Rate: 5
       - Item: Zelunium_Ore
         Rate: 80
-      - Item: Rigid_Sky_Deleter_Card
+      - Item: Firm_Deleter2_Card
         Rate: 1
         StealProtected: true
   - Id: 20375
@@ -96358,7 +96360,7 @@ Body:
         Rate: 5
       - Item: Zelunium_Ore
         Rate: 80
-      - Item: Rigid_Earth_Deleter_Card
+      - Item: Firm_Deleter1_Card
         Rate: 1
         StealProtected: true
   - Id: 20376
@@ -96399,14 +96401,14 @@ Body:
         Rate: 750
       - Item: Shadowdecon_Ore
         Rate: 80
-      - Item: Lava_Leather_Sandals
+      - Item: Lava_Leather_Sandle
         Rate: 50
         RandomOptionGroup: MAGMA3
       - Item: Magma_Essence
         Rate: 5
       - Item: Zelunium_Ore
         Rate: 80
-      - Item: Rigid_Explosion_Card
+      - Item: Firm_Explosion_Card
         Rate: 1
         StealProtected: true
   - Id: 20377
@@ -96451,10 +96453,10 @@ Body:
         Rate: 5
       - Item: Shadowdecon_Ore
         Rate: 80
-      - Item: Lava_Leather_Hood
+      - Item: Lava_Leather_Hode
         Rate: 50
         RandomOptionGroup: MAGMA3
-      - Item: Rigid_Kaho_Card
+      - Item: Firm_Kaho_Card
         Rate: 1
         StealProtected: true
   - Id: 20378
@@ -96503,7 +96505,7 @@ Body:
         Rate: 5
       - Item: Zelunium_Ore
         Rate: 80
-      - Item: Rigid_Lava_Golem_Card
+      - Item: Firm_Lava_G_Card
         Rate: 1
         StealProtected: true
   - Id: 20379
@@ -96788,7 +96790,7 @@ Body:
         Rate: 3500
       - Item: Zelunium
         Rate: 50
-      - Item: Lava_Leather_Suit
+      - Item: Lava_Leather_Suits
         Rate: 100
         RandomOptionGroup: MAGMA3
       - Item: Lava_Leather_Robe
@@ -105015,6 +105017,7 @@ Body:
     DamageMotion: 480
     DamageTaken: 1
     DamageTaken2: 50
+    Class: Boss
     Modes:
       NoRandomWalk: true
       TeleportBlock: true

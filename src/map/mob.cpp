@@ -2782,7 +2782,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 
 	} //End EXP giving.
 
-	if( !(type&1) && !map_getmapflag(m, MF_NOMOBLOOT) && !md->state.rebirth && (
+	if( !(type&1) && !map_getmapflag(m, MF_NOMOBLOOT) && !(md->get_bosstype() != BOSSTYPE_MVP && map_getmapflag(m, MF_NOLOOTNORMALMOB)) && !md->state.rebirth && (
 		!md->special_state.ai || //Non special mob
 		battle_config.alchemist_summon_reward == 2 || //All summoned give drops
 		(md->special_state.ai==AI_SPHERE && battle_config.alchemist_summon_reward == 1) //Marine Sphere Drops items.
@@ -2802,6 +2802,40 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type)
 		dlist->second_charid = (second_sd ? second_sd->status.char_id : 0);
 		dlist->third_charid = (third_sd ? third_sd->status.char_id : 0);
 		dlist->item = NULL;
+
+		for (auto &dropitem2 : md->db->dropitem2) {// additional drops
+			if (dropitem2.nameid == 0)
+				continue;
+			std::shared_ptr<item_data> it2 = item_db.find(md->db->dropitem[i].nameid);
+
+			if (it2 == nullptr)
+				continue;
+			
+			//drop_rate = mob_getdroprate(src, md->db, dropitem2.rate, drop_modifier);
+			drop_rate = mob_getdroprate(src, md->db, md->db->dropitem2[i].rate, drop_modifier, md);
+
+			// attempt to drop the item
+			if (rnd() % 10000 >= drop_rate)
+				continue;
+
+			if( mvp_sd && it2->type == IT_PETEGG ) {
+				pet_create_egg(mvp_sd, dropitem2.nameid);
+				continue;
+			}
+
+			ditem = mob_setdropitem(&dropitem2, 1, md->mob_id);
+
+			//A Rare Drop Global Announce by Lupus
+			if( mvp_sd && dropitem2.rate <= battle_config.rare_drop_announce ) {
+				char message[128];
+				sprintf (message, msg_txt(NULL,541), mvp_sd->status.name, md->name, it2->ename.c_str(), (float)drop_rate/100);
+				//MSG: "'%s' won %s's %s (chance: %0.02f%%)"
+				intif_broadcast(message,strlen(message)+1,BC_DEFAULT);
+			}
+			// Announce first, or else ditem will be freed. [Lance]
+			// By popular demand, use base drop rate for autoloot code. [Skotlex]
+			mob_item_drop(md, dlist, ditem, 0, battle_config.autoloot_adjust ? drop_rate : dropitem2.rate, homkillonly || merckillonly);
+		}
 
 		for (i = 0; i < MAX_MOB_DROP_TOTAL; i++) {
 			if (md->db->dropitem[i].nameid == 0)
@@ -5347,6 +5381,76 @@ static int mob_read_sqldb(void)
 	return 0;
 }
 
+// additional drops
+const std::string MobDrop2Database::getDefaultLocation() {
+	return std::string(db_path) + "/" + DBIMPORT + "/mob_drop2.yml";
+}
+
+uint64 MobDrop2Database::parseBodyNode(const ryml::NodeRef&node) {
+	uint32 mob_id;
+
+	if (!this->asUInt32(node, "Id", mob_id))
+		return 0;
+
+	std::shared_ptr<s_mob_db> mob = mob_db.find(mob_id);
+
+	if (mob == nullptr) {
+		this->invalidWarning(node["Id"], "Unknown mob Id %d.\n", mob_id);
+		return 0;
+	}
+
+	if (!this->nodeExists(node, "Drops2"))
+		return 0;
+
+	const ryml::NodeRef&dropNode = node["Drops2"];
+
+	for (const ryml::NodeRef&dropit : dropNode) {
+		std::string item_name;
+
+		if (!this->asString(dropit, "Item", item_name))
+			return 0;
+
+		std::shared_ptr<item_data> item = item_db.search_aegisname( item_name.c_str() );
+
+		if (item == nullptr) {
+			this->invalidWarning(dropit["Item"], "Monster %d item %s does not exist, skipping.\n", mob_id, item_name.c_str());
+			return 0;
+		}
+
+		uint16 rate;
+
+		if (!this->asUInt16Rate(dropit, "Rate", rate))
+			return 0;
+
+		uint16 group = 0;
+
+		if (this->nodeExists(dropit, "RandomOptionGroup")) {
+			std::string group_name;
+
+			if (!this->asString(dropit, "RandomOptionGroup", group_name))
+				return 0;
+
+			if (!random_option_group.option_get_id(group_name.c_str(), group)) {
+				this->invalidWarning(dropit["RandomOptionGroup"], "Unknown random option group %s for monster %d.\n", group_name.c_str(), mob_id);
+				return 0;
+			}
+		}
+
+		s_mob_drop entry = {};
+
+		entry.nameid = item->nameid;
+		entry.rate = rate;
+		entry.steal_protected = true;
+		entry.randomopt_group = group;
+
+		mob->dropitem2.push_back(entry);
+	}
+
+	return 1;
+}
+
+MobDrop2Database mob_drop2_db;
+
 const std::string MobAvailDatabase::getDefaultLocation() {
 	return std::string(db_path) + "/" + DBIMPORT + "/mob_avail.yml";
 }
@@ -6403,6 +6507,90 @@ static void mob_drop_ratio_adjust(void){
 
 			mob->dropitem[j].rate = rate;
 		}
+		for (auto &dropitem2 : mob->dropitem) {// additional drops
+			unsigned short ratemin, ratemax;
+			bool is_treasurechest;
+
+			nameid = dropitem2.nameid;
+			rate = dropitem2.rate;
+
+			if( nameid == 0 || rate == 0 ){
+				continue;
+			}
+
+			id = itemdb_search( nameid );
+
+			// Item is not known anymore(should never happen)
+			if( !id ){
+				ShowWarning( "Monster \"%s\"(id:%hu) is dropping an unknown item(id: %u)\n", mob->name.c_str(), mob_id, nameid );
+				dropitem2.nameid = 0;
+				dropitem2.rate = 0;
+				continue;
+			}
+
+			if( battle_config.drop_rateincrease && rate < 5000 ){
+				rate++;
+			}
+
+			// Treasure box drop rates [Skotlex]
+			if (util::vector_exists(mob->race2, RC2_TREASURE)) {
+				is_treasurechest = true;
+
+				rate_adjust = battle_config.item_rate_treasure;
+				ratemin = battle_config.item_drop_treasure_min;
+				ratemax = battle_config.item_drop_treasure_max;
+			} else {
+				bool is_mvp = mob->get_bosstype() == BOSSTYPE_MVP;
+				bool is_boss = mob->get_bosstype() == BOSSTYPE_MINIBOSS;
+
+				is_treasurechest = false;
+
+				 // Added suport to restrict normal drops of MVP's [Reddozen]
+				switch( id->type ){
+					case IT_HEALING:
+						rate_adjust = is_mvp ? battle_config.item_rate_heal_mvp : (is_boss ? battle_config.item_rate_heal_boss : battle_config.item_rate_heal);
+						ratemin = battle_config.item_drop_heal_min;
+						ratemax = battle_config.item_drop_heal_max;
+						break;
+					case IT_USABLE:
+					case IT_CASH:
+						rate_adjust = is_mvp ? battle_config.item_rate_use_mvp : (is_boss ? battle_config.item_rate_use_boss : battle_config.item_rate_use);
+						ratemin = battle_config.item_drop_use_min;
+						ratemax = battle_config.item_drop_use_max;
+						break;
+					case IT_WEAPON:
+					case IT_ARMOR:
+					case IT_PETARMOR:
+						rate_adjust = is_mvp ? battle_config.item_rate_equip_mvp : (is_boss ? battle_config.item_rate_equip_boss : battle_config.item_rate_equip);
+						ratemin = battle_config.item_drop_equip_min;
+						ratemax = battle_config.item_drop_equip_max;
+						break;
+					case IT_CARD:
+						rate_adjust = is_mvp ? battle_config.item_rate_card_mvp : (is_boss ? battle_config.item_rate_card_boss : battle_config.item_rate_card);
+						ratemin = battle_config.item_drop_card_min;
+						ratemax = battle_config.item_drop_card_max;
+						break;
+					default:
+						rate_adjust = is_mvp ? battle_config.item_rate_common_mvp : (is_boss ? battle_config.item_rate_common_boss : battle_config.item_rate_common);
+						ratemin = battle_config.item_drop_common_min;
+						ratemax = battle_config.item_drop_common_max;
+						break;
+				}
+			}
+
+			item_dropratio_adjust( nameid, mob_id, &rate_adjust );
+
+			// remove the item if the rate of item_dropratio_adjust is 0
+			if (rate_adjust == 0) {
+				dropitem2.nameid = 0;
+				dropitem2.rate = 0;
+				continue;
+			}
+
+			rate = mob_drop_adjust( rate, rate_adjust, ratemin, ratemax );
+
+			dropitem2.rate = rate;
+		}
 	}
 
 	// Now that we are done we can delete the stored item ratios
@@ -6688,6 +6876,8 @@ static void mob_load(void)
 
 	mob_drop_ratio_adjust();
 	mob_skill_db_set();
+
+	mob_drop2_db.load();
 }
 
 /**

@@ -16801,6 +16801,8 @@ Body:
     AegisName: Ticket_Golem
     Name: Golem Exchange Coupon
     Type: Etc
+    Buy: 10
+    Sell: 1
     Trade:
       #NoDrop: true
       #NoTrade: true
@@ -16813,6 +16815,8 @@ Body:
     AegisName: Ticket_Civil_Servant
     Name: Civil Servant Exchange Coupon
     Type: Etc
+    Buy: 10
+    Sell: 1
     Trade:
       #NoDrop: true
       #NoTrade: true
@@ -16825,6 +16829,8 @@ Body:
     AegisName: Heartbroken_Tears
     Name: Regrettable Tears
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 2
     Flags:
       BuyingStore: true
@@ -16832,6 +16838,8 @@ Body:
     AegisName: Vulcan_Bullet
     Name: Vulcan Bullet
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 1
     Flags:
       BuyingStore: true
@@ -16839,13 +16847,16 @@ Body:
     AegisName: Magic_Gear_Fuel
     Name: Magic Gear Fuel
     Type: Etc
-    Weight: 1
+    Buy: 10
+    Sell: 1
     Flags:
       BuyingStore: true
   - Id: 6147
     AegisName: Liquid_Condensed_Bullet
     Name: Liquid Condensed Bullet
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 1
     Flags:
       BuyingStore: true
@@ -16853,6 +16864,8 @@ Body:
     AegisName: Chocolate_Of_Eternity
     Name: Eternity Of Chocolate
     Type: Etc
+    Buy: 10
+    Sell: 1
     Trade:
       #NoDrop: true
       #NoTrade: true
@@ -32198,6 +32211,8 @@ Body:
     Name: Bullet
     Type: Ammo
     SubType: Bullet
+    Buy: 10
+    Sell: 1
     Attack: 25
     Jobs:
       Gunslinger: true
@@ -32210,6 +32225,8 @@ Body:
     Name: Surplus Silver Bullet
     Type: Ammo
     SubType: Bullet
+    Buy: 10
+    Sell: 1
     Weight: 2
     Attack: 15
     Jobs:
@@ -32225,6 +32242,8 @@ Body:
     Name: Surplus Bloody Shell
     Type: Ammo
     SubType: Bullet
+    Buy: 10
+    Sell: 1
     Weight: 2
     Attack: 30
     Jobs:
@@ -32240,7 +32259,8 @@ Body:
     Name: Surplus Flare Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 80
+    Buy: 10
+    Sell: 1
     Weight: 5
     Attack: 50
     Classes:
@@ -32254,7 +32274,8 @@ Body:
     Name: Surplus Lightning Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 80
+    Buy: 10
+    Sell: 1
     Weight: 5
     Attack: 50
     Classes:
@@ -32268,7 +32289,8 @@ Body:
     Name: Surplus Poison Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 80
+    Buy: 10
+    Sell: 1
     Weight: 5
     Attack: 50
     Classes:
@@ -32283,7 +32305,8 @@ Body:
     Name: Surplus Blind Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 80
+    Buy: 10
+    Sell: 1
     Weight: 5
     Attack: 50
     Classes:
@@ -32298,7 +32321,8 @@ Body:
     Name: Surplus Freezing Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 80
+    Buy: 10
+    Sell: 1
     Weight: 5
     Attack: 50
     Classes:
@@ -32312,7 +32336,8 @@ Body:
     Name: Sow Bug
     Type: Ammo
     SubType: Bullet
-    Weight: 5
+    Buy: 10
+    Sell: 1
     Attack: 50
     Jobs:
       Gunslinger: true
@@ -32335,7 +32360,8 @@ Body:
     Name: Slug Ammunition L
     Type: Ammo
     SubType: Bullet
-    Weight: 250
+    Buy: 10
+    Sell: 1
     Attack: 30
     Classes:
       All: false
@@ -32346,7 +32372,8 @@ Body:
     Name: Slug Ammunition M
     Type: Ammo
     SubType: Bullet
-    Weight: 500
+    Buy: 10
+    Sell: 1
     Attack: 30
     Classes:
       All: false
@@ -32357,7 +32384,8 @@ Body:
     Name: Slug Ammunition H
     Type: Ammo
     SubType: Bullet
-    Weight: 750
+    Buy: 10
+    Sell: 1
     Attack: 30
     Classes:
       All: false
@@ -32368,7 +32396,8 @@ Body:
     Name: Slug Ammunition SH
     Type: Ammo
     SubType: Bullet
-    Weight: 1000
+    Buy: 10
+    Sell: 1
     Attack: 30
     Classes:
       All: false
@@ -32379,7 +32408,8 @@ Body:
     Name: Slug Ammunition XH
     Type: Ammo
     SubType: Bullet
-    Weight: 1200
+    Buy: 10
+    Sell: 1
     Attack: 30
     Classes:
       All: false
@@ -32390,7 +32420,8 @@ Body:
     Name: Armor-Piercing Bullet
     Type: Ammo
     SubType: Bullet
-    Weight: 1
+    Buy: 10
+    Sell: 1
     Attack: 50
     Jobs:
       Gunslinger: true
@@ -32405,7 +32436,8 @@ Body:
     Name: Blazing Bullet
     Type: Ammo
     SubType: Bullet
-    Weight: 1
+    Buy: 10
+    Sell: 1
     Attack: 40
     Jobs:
       Gunslinger: true
@@ -32420,7 +32452,8 @@ Body:
     Name: Freezing Bullet
     Type: Ammo
     SubType: Bullet
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 40
     Jobs:
       Gunslinger: true
@@ -32435,8 +32468,8 @@ Body:
     Name: Lightning Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 40
     Jobs:
       Gunslinger: true
@@ -32451,8 +32484,8 @@ Body:
     Name: Magic Stone Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 40
     Jobs:
       Gunslinger: true
@@ -32467,8 +32500,8 @@ Body:
     Name: Purifying Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 40
     Jobs:
       Gunslinger: true
@@ -32483,8 +32516,8 @@ Body:
     Name: Silver Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 15
     Jobs:
       Gunslinger: true
@@ -32499,8 +32532,8 @@ Body:
     Name: Bloody Shell
     Type: Ammo
     SubType: Bullet
-    #Buy: 10
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 30
     Jobs:
       Gunslinger: true
@@ -32515,8 +32548,8 @@ Body:
     Name: Flare Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 15
-    Weight: 5
+    Buy: 5
+    Sell: 1
     Attack: 50
     Classes:
       All: false
@@ -32529,8 +32562,8 @@ Body:
     Name: Lightning Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 15
-    Weight: 5
+    Buy: 5
+    Sell: 1
     Attack: 50
     Classes:
       All: false
@@ -32543,8 +32576,8 @@ Body:
     Name: Poison Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 15
-    Weight: 5
+    Buy: 5
+    Sell: 1
     Attack: 50
     Classes:
       All: false
@@ -32557,8 +32590,8 @@ Body:
     Name: Blind Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 15
-    Weight: 5
+    Buy: 5
+    Sell: 1
     Attack: 50
     Classes:
       All: false
@@ -32571,8 +32604,8 @@ Body:
     Name: Freezing Sphere
     Type: Ammo
     SubType: Grenade
-    Buy: 15
-    Weight: 5
+    Buy: 5
+    Sell: 1
     Attack: 50
     Classes:
       All: false
@@ -32585,8 +32618,8 @@ Body:
     Name: Flare Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 20
     Jobs:
       Gunslinger: true
@@ -32601,8 +32634,8 @@ Body:
     Name: Lightning Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 20
     Jobs:
       Gunslinger: true
@@ -32617,8 +32650,8 @@ Body:
     Name: Ice Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 20
     Jobs:
       Gunslinger: true
@@ -32633,8 +32666,8 @@ Body:
     Name: Poison Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 20
     Jobs:
       Gunslinger: true
@@ -32650,8 +32683,8 @@ Body:
     Name: Blind Bullet
     Type: Ammo
     SubType: Bullet
-    #Buy: 5
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 20
     Jobs:
       Gunslinger: true
@@ -32667,8 +32700,8 @@ Body:
     Name: Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 4
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 10
     Jobs:
       KagerouOboro: true
@@ -32681,8 +32714,8 @@ Body:
     Name: Nimbus Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 10
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 30
     Jobs:
       KagerouOboro: true
@@ -32695,8 +32728,8 @@ Body:
     Name: Flash Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 20
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 45
     Jobs:
       KagerouOboro: true
@@ -32709,8 +32742,8 @@ Body:
     Name: Sharp Leaf Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 40
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 70
     Jobs:
       KagerouOboro: true
@@ -32723,8 +32756,8 @@ Body:
     Name: Thorn Needle Shuriken
     Type: Ammo
     SubType: Shuriken
-    Buy: 100
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 100
     Jobs:
       KagerouOboro: true
@@ -32737,8 +32770,8 @@ Body:
     Name: Icicle Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 30
-    Weight: 1
+    Buy: 5
+    Sell: 1
     Attack: 30
     Jobs:
       KagerouOboro: true
@@ -32753,7 +32786,8 @@ Body:
     Name: Black Earth Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 30
+    Buy: 5
+    Sell: 1
     Weight: 1
     Attack: 30
     Jobs:
@@ -32769,7 +32803,8 @@ Body:
     Name: High Wind Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 30
+    Buy: 5
+    Sell: 1
     Weight: 1
     Attack: 30
     Jobs:
@@ -32785,7 +32820,8 @@ Body:
     Name: Heat Wave Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 30
+    Buy: 5
+    Sell: 1
     Weight: 1
     Attack: 30
     Jobs:
@@ -32801,7 +32837,8 @@ Body:
     Name: Fell Poison Kunai
     Type: Ammo
     SubType: Kunai
-    Buy: 30
+    Buy: 5
+    Sell: 1
     Weight: 1
     Attack: 30
     Jobs:
@@ -32818,7 +32855,8 @@ Body:
     Name: Apple Bomb
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 1
     Jobs:
       Alchemist: true
@@ -32833,7 +32871,8 @@ Body:
     Name: Coconut Bomb
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 1
     Jobs:
       Alchemist: true
@@ -32848,7 +32887,8 @@ Body:
     Name: Melon Bomb
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 1
     Jobs:
       Alchemist: true
@@ -32863,7 +32903,8 @@ Body:
     Name: Pineapple Bomb
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 1
     Jobs:
       Alchemist: true
@@ -32878,7 +32919,8 @@ Body:
     Name: Banana Bomb
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 1
     Jobs:
       Alchemist: true
@@ -32893,7 +32935,8 @@ Body:
     Name: Black Lump
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 50
     Jobs:
       Alchemist: true
@@ -32908,7 +32951,8 @@ Body:
     Name: Hard Black Lump
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 50
     Jobs:
       Alchemist: true
@@ -32923,7 +32967,8 @@ Body:
     Name: Extremely Hard Black Lump
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 50
     Jobs:
       Alchemist: true
@@ -32938,7 +32983,8 @@ Body:
     Name: Mysterious Powder
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 10
     Jobs:
       Alchemist: true
@@ -32955,7 +33001,8 @@ Body:
     Name: Throwing Boost 500
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 10
     Jobs:
       Alchemist: true
@@ -32972,7 +33019,8 @@ Body:
     Name: Throwing Full Swing K
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 50
     Jobs:
       Alchemist: true
@@ -32989,7 +33037,8 @@ Body:
     Name: Throwing Mana Plus
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 50
     Jobs:
       Alchemist: true
@@ -33006,7 +33055,8 @@ Body:
     Name: Throwing Cure Free
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 50
     Jobs:
       Alchemist: true
@@ -33032,7 +33082,8 @@ Body:
     Name: Throwing Muramura M
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 10
     Jobs:
       Alchemist: true
@@ -33049,7 +33100,8 @@ Body:
     Name: Throwing Falmons F
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 10
     Jobs:
       Alchemist: true
@@ -33066,7 +33118,8 @@ Body:
     Name: Throwing Increase HP Potion (Small)
     Type: Ammo
     SubType: Throwweapon
-    Buy: 100
+    Buy: 5
+    Sell: 1
     Weight: 20
     Jobs:
       Alchemist: true
@@ -33484,7 +33537,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 100
-    Weight: 1
     Attack: 100
     Jobs:
       Alchemist: true
@@ -33501,7 +33553,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 200
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -33520,7 +33571,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 200
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -33539,7 +33589,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 200
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -33558,7 +33607,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 500
-    Weight: 1
     Attack: 250
     Jobs:
       Alchemist: true
@@ -33575,7 +33623,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 50
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -33594,7 +33641,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 50
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -33613,7 +33659,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 50
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -33632,7 +33677,6 @@ Body:
     Type: Ammo
     SubType: Cannonball
     Buy: 50
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -33650,7 +33694,6 @@ Body:
     Name: Poison Cannon Ball
     Type: Ammo
     SubType: Cannonball
-    Weight: 1
     Attack: 120
     Jobs:
       Alchemist: true
@@ -37270,7 +37313,7 @@ Body:
     Name: Clothing Dye Coupon
     Type: Etc
   - Id: 6047
-    AegisName: Clothing_Dye_Coupon_II
+    AegisName: Clothing_Dye_Coupon2
     Name: Clothing Dye Coupon II
     Type: Etc
   - Id: 25739
@@ -72015,18 +72058,26 @@ Body:
     AegisName: Dry_Sand
     Name: Dry Sand
     Type: Etc
+    Buy: 10
+    Sell: 1
   - Id: 1000505
     AegisName: Opaque_Liquid
     Name: Opaque Liquid
     Type: Etc
+    Buy: 10
+    Sell: 1
   - Id: 1000506
     AegisName: Shell_Of_Cognition
     Name: Shell of Awareness
     Type: Etc
+    Buy: 10
+    Sell: 1
   - Id: 1000510
     AegisName: IL_Twins_Feeler
     Name: Ant Antennae
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72034,6 +72085,8 @@ Body:
     AegisName: IL_Twins_Leg
     Name: Ant Legs
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72041,6 +72094,8 @@ Body:
     AegisName: IL_Twins_Jaw
     Name: Ant's Jaw
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72048,6 +72103,8 @@ Body:
     AegisName: IL_Twins_Acid
     Name: Dangerous Acid
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72055,6 +72112,8 @@ Body:
     AegisName: IL_Twins_Hat
     Name: Gaia's Worn Hat
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72062,6 +72121,8 @@ Body:
     AegisName: IL_Twins_Shovel
     Name: Small Shovel
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72069,6 +72130,8 @@ Body:
     AegisName: IL_Twins_Fang
     Name: Bat Jawbone
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72076,6 +72139,8 @@ Body:
     AegisName: IL_Twins_Fur
     Name: Bat Fur
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72083,6 +72148,8 @@ Body:
     AegisName: IL_Twins_Crown
     Name: Maya's Crown
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
     Flags:
       BuyingStore: true
@@ -72090,116 +72157,154 @@ Body:
     AegisName: ASPDStone_Robe_D
     Name: ASPD Stone(Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000521
     AegisName: MinorCastStone_Robe_D
     Name: Minor Casting Stone (Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000522
     AegisName: CastStone_Robe_D
     Name: Variable Casting Stone(Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000523
     AegisName: Range_Stone_Robe_D
     Name: Range Stone (Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000524
     AegisName: Melee_Stone_Robe_D
     Name: Melee Stone(Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000525
     AegisName: SPdrainStone_Robe_D
     Name: SP Absorption Stone (Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000526
     AegisName: HPdrainStone_Robe_D
     Name: HP Absorbtion Stone(Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000527
     AegisName: Magic_Stone_Robe_D
     Name: Magic Power Stone(Dual)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000528
     AegisName: Magic_Stone_Top
     Name: Magic Power Stone(Upper)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000529
     AegisName: Magic_Stone_Middle
     Name: Magic Power Stone(Mid)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000530
     AegisName: Magic_Stone_Bottom
     Name: Magic Power Stone(Lower)
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 100
   - Id: 1000552
     AegisName: Evil_Water
     Name: Evil Water
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 10
   - Id: 1000563
     AegisName: Soa_Charm
     Name: Soa Charm
     Type: Etc
+    Buy: 10
+    Sell: 1
     Sell: 1
     Weight: 1
   - Id: 1000564
     AegisName: Nw_Grenade
     Name: Nw Grenade
-    Buy: 30
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 1
   - Id: 1000565
     AegisName: SS_Charm
-    Buy: 30
     Name: SS Charm
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 1
   - Id: 1000566
     AegisName: SS_Charm_F
     Name: SS Charm F
-    Buy: 30
+    Buy: 10
+    Sell: 1
     Type: Etc
     Weight: 1
   - Id: 1000567
     AegisName: SS_Charm_W
     Name: SS Charm W
-    Buy: 30
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 1
   - Id: 1000568
     AegisName: SS_Charm_G
     Name: SS Charm G
-    Buy: 30
     Type: Etc
+    Buy: 10
+    Sell: 1
     Weight: 1
   - Id: 1000569
     AegisName: SS_Charm_L
     Name: SS Charm L
-    Buy: 30
+    Buy: 10
+    Sell: 1
     Type: Etc
     Weight: 1
   - Id: 1000570
     AegisName: Noodle_Fes_Ticket
     Name: Noodle Festival Development Fund Certificate
     Type: Etc
+    Buy: 10
+    Sell: 1
   - Id: 1000571
     AegisName: E_Star_Button
     Name: Is it a star button?!
     Type: Etc
+    Buy: 10
+    Sell: 1
   - Id: 1000604
     AegisName: Ep19_Juncea_Tube
     Name: Juncea Test Tube
     Type: Etc
+    Buy: 10
+    Sell: 1
     Trade:
       #NoDrop: true
       #NoTrade: true

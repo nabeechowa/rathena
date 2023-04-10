@@ -1350,12 +1350,15 @@ mal_in01,20,107,3	script	Lace La Zard#cos_ect	4_FROG,{
 	case 372:	// Costume Happiness Wing gen2
 	case 40201:	// Costume Happiness Wing gen3
 	case 40161:	// Costume Happiness Wing gen4
+	case 40427:	// C_Wing_Of_Happiness_Gen5
 	case 40015:	// Costume Rudra Wing Gen2
 	case 40126:	// Costume Rudra Wing Gen3
 	case 40258:	// Costume Rudra Wing Gen4
+	case 40425:	// Costume_Rudra_Wings_Gen5
 	case 40026:	// Costume Valkyrie Wing Gen2
 	case 40223:	// Costume Valkyrie Wing Gen3
 	case 40262:	// Costume Valkyrie Wing Gen4
+	case 40423:	// C_Valkyrie_Wing_Gen5
 	case 20502:	// C_Devil_Wing
 	case 20504:	// C_Cupid_Wing_Pink
 	case 20505:	// C_Cupid_Wing_Skyblue
