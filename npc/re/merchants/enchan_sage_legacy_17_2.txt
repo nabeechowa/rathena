@@ -9,7 +9,7 @@
 //= 1.2 Cleanup [Capuche]
 //============================================================
 
-ba_in01,87,370,3	script	Lisa#ep172_merchant	713,{
+ba_in01,87,370,3	script	Lisa#ep172_merchant	20698,{
 	if (checkweight(1201,3) == 0) {
 		mes "^ff0000It seems that the type or weight of the item you have is too much. Please organize your inventory.^000000";
 		close;
@@ -222,31 +222,31 @@ ba_in01,87,370,3	script	Lisa#ep172_merchant	713,{
 //= Merchants
 -	marketshop	ep172littlemanager00	-1,1000227:172:999999
 
-ba_in01,87,386,3	script	Child Manager ï¿½ï¿½#ep172_pet	EP17_2_CHILD_ADMIN1,{
+ba_in01,87,386,3	script	Child Manager ©¬#ep172_pet	EP17_2_CHILD_ADMIN1,{
 	if (checkweight(1201,3) == 0) {
 		mes "- You have too many items.";
 		mes "Please clear your inventory and try again. -";
 		close;
 	}
-	mes "[Child Manager ï¿½ï¿½]";
+	mes "[Child Manager ©¬]";
 	mes "I have a whole bunch of little stuffs!";
 	next;
 	switch( select( "Little Manager", "Cloud Cotton", "Little Headress", "Cancel" ) ) {
 	case 1:
-		mes "[Child Manager ï¿½ï¿½]";
+		mes "[Child Manager ©¬]";
 		mes "If you want to play with the little manager, it would cost you 30 Barmeal Tickets.";
 		next;
 		if (select( "Exchange.", "Stop." ) == 2) {
-			mes "[Child Manager ï¿½ï¿½]";
+			mes "[Child Manager ©¬]";
 			mes "Then, it's time for me to play!";
 			close;
 		}
 		if (countitem(1000103) < 30) {
-			mes "[Child Manager ï¿½ï¿½]";
+			mes "[Child Manager ©¬]";
 			mes "Like I said, if you want to play with the little manager, you'll need 30 Barmeal Tickets!";
 			close;
 		}
-		mes "[Child Manager ï¿½ï¿½]";
+		mes "[Child Manager ©¬]";
 		mes "Have fun with your new friend!";
 		delitem 1000103,30;
 		getitem 9123,1;
@@ -258,7 +258,7 @@ ba_in01,87,386,3	script	Child Manager ï¿½ï¿½#ep172_pet	EP17_2_CHILD_ADMIN1,{
 		callshop "barter_Ep_17_2_C_Admin_Acc";
 		end;
 	case 4:
-		mes "[Child Manager ï¿½ï¿½]";
+		mes "[Child Manager ©¬]";
 		mes "Then, it's time for me to play!";
 		close;
 	}
@@ -359,7 +359,7 @@ ba_in01,87,380,3	script	Yecheon#ep172module_trader	4_EP17_CLEANER_W,{
 		.@price = 90;
 		cutin "ep172_omega",2;
 		mes "[Yecheon]";
-		//mes "I will exchange 1 random Automatic Module excluding the epic grade modules for " + .@price + " " + mesitemlink(1000103) + ".";
+		mes "I will exchange 1 random Automatic Module excluding the epic grade modules for " + .@price + " " + mesitemlink(1000103) + ".";
 		next;
 		cutin "",255;
 		if (select( "Exchange Barmeal Ticket.", "Do not exchange" ) == 2) {
@@ -383,7 +383,7 @@ ba_in01,87,380,3	script	Yecheon#ep172module_trader	4_EP17_CLEANER_W,{
 		.@zeny = 1500000;
 		cutin "ep172_omega",2;
 		mes "[Yecheon]";
-		//mes "I will exchange ^FF00001 Physical Automatic Improvement Device^000000 for " + .@price + " " + mesitemlink(1000103) + " or " + .@zeny + " Zeny.";
+		mes "I will exchange ^FF00001 Physical Automatic Improvement Device^000000 for " + .@price + " " + mesitemlink(1000103) + " or " + .@zeny + " Zeny.";
 		next;
 		cutin "",255;
 		switch( select( "Exchange for Barmeal Ticket.", "Exchange for 1500000 Zeny.", "Do not exchange." ) ) {
@@ -425,7 +425,7 @@ ba_in01,87,380,3	script	Yecheon#ep172module_trader	4_EP17_CLEANER_W,{
 		.@zeny = 1500000;
 		cutin "ep172_omega",2;
 		mes "[Yecheon]";
-		// "I will exchange ^FF00001 Magical Automatic Improvement Device^000000 for " + .@price + " " + mesitemlink(1000103) + " or " + .@zeny + " Zeny.";
+		mes "I will exchange ^FF00001 Magical Automatic Improvement Device^000000 for " + .@price + " " + mesitemlink(1000103) + " or " + .@zeny + " Zeny.";
 		next;
 		cutin "",255;
 		switch( select( "Exchange for Barmeal Ticket.", "Exchange for 1500000 Zeny.", "Do not exchange." ) ) {
