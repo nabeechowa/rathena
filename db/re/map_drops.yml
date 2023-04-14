@@ -41,7 +41,7 @@
 
 Header:
   Type: MAP_DROP_DB
-  Version: 1
+  Version: 2
 
 Body:
 # TODO implement StealProtected. Currently all theses items are 'StealProtected: false'

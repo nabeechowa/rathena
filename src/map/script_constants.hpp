@@ -9368,6 +9368,7 @@
 	export_constant(HAT_EF_SAKURA);
 	export_constant(HAT_EF_CLOUD2);
 	export_constant(HAT_EF_FEATHER_FLUTTERING);
+	export_constant(HAT_EF_C_Dark_Lord_Manteau);
 	export_constant(HAT_EF_CAMELLIA_HAIR_PIN);
 	export_constant(HAT_EF_JP_EV_EFFECT01);
 	export_constant(HAT_EF_JP_EV_EFFECT02);

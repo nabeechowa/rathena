@@ -2635,7 +2635,7 @@ Body:
       - Item: Cat_Hairband
         Rate: 1
       - Item: Raccoondog_Doll
-        Rate: 3
+        Rate: 2
       - Item: Wing_Of_Fly
         Rate: 500
       - Item: Bluish_Green_Jewel
@@ -2827,7 +2827,7 @@ Body:
       - Item: Bear's_Foot
         Rate: 4500
       - Item: Poo_Poo_Hat
-        Rate: 3
+        Rate: 1
       - Item: Animal's_Skin
         Rate: 2500
       - Item: Wing_Of_Fly
@@ -6099,23 +6099,73 @@ Body:
       - Item: Horong_Card
         Rate: 1
         StealProtected: true
+#Real Jakk==============================
+#  - Id: 1130
+#    AegisName: JAKK
+#    Name: Jakk
+#    Level: 63
+#    Hp: 2054
+#    BaseExp: 588
+#    JobExp: 532
+#    Attack: 229
+#    Attack2: 37
+#    Defense: 90
+#    MagicDefense: 25
+#    Str: 58
+#    Agi: 43
+#    Vit: 42
+#    Int: 25
+#    Dex: 61
+#    Luk: 15
+#    AttackRange: 1
+#    SkillRange: 10
+#    ChaseRange: 12
+#    Size: Medium
+#    Race: Formless
+#    Element: Fire
+#    ElementLevel: 2
+#    WalkSpeed: 200
+#    AttackDelay: 1180
+#    AttackMotion: 480
+#    DamageMotion: 648
+#    Ai: 21
+#    Drops:
+#      - Item: Pumpkin_Head
+#        Rate: 4500
+#      - Item: Zargon
+#        Rate: 450
+#      - Item: Elunium
+#        Rate: 16
+#      - Item: Tights_
+#        Rate: 3
+#      - Item: Frozen_Heart
+#        Rate: 3
+#      - Item: Pumpkin
+#        Rate: 500
+#      - Item: Light_Granule
+#        Rate: 5
+#      - Item: Jakk_Card
+#        Rate: 1
+#        StealProtected: true
+#===========================================================================
+#Event Jakk==============================
   - Id: 1130
     AegisName: JAKK
     Name: Jakk
-    Level: 63
-    Hp: 2054
-    BaseExp: 588
-    JobExp: 532
-    Attack: 229
-    Attack2: 37
+    Level: 160
+    Hp: 16000
+    BaseExp: 10000
+    JobExp: 10000
+    Attack: 690
+    Attack2: 636
     Defense: 90
-    MagicDefense: 25
-    Str: 58
-    Agi: 43
-    Vit: 42
-    Int: 25
-    Dex: 61
-    Luk: 15
+    MagicDefense: 82
+    Str: 100
+    Agi: 50
+    Vit: 95
+    Int: 50
+    Dex: 50
+    Luk: 86
     AttackRange: 1
     SkillRange: 10
     ChaseRange: 12
@@ -6129,23 +6179,28 @@ Body:
     DamageMotion: 648
     Ai: 21
     Drops:
-      - Item: Pumpkin_Head
-        Rate: 4500
-      - Item: Zargon
-        Rate: 450
+      - Item: Update_Ticket
+        Rate: 6500
+      - Item: Zeny_Bag
+        Rate: 1
       - Item: Elunium
-        Rate: 16
-      - Item: Tights_
+        Rate: 10000
+      - Item: Soul_3rd_Stone
         Rate: 3
-      - Item: Frozen_Heart
-        Rate: 3
+      - Item: Old_Card_Album
+        Rate: 1
       - Item: Pumpkin
         Rate: 500
-      - Item: Light_Granule
-        Rate: 5
-      - Item: Jakk_Card
+      - Item: Update_Ticket
         Rate: 1
         StealProtected: true
+#==New Year Event==#
+#      - Item: NEW_YEAR_SCROLL
+#        Rate: 2
+#      - Item: Star_Decor
+#        Rate: 1
+#        StealProtected: true
+#===========================================================================
   - Id: 1131
     AegisName: JOKER
     Name: Joker
@@ -16860,7 +16915,7 @@ Body:
       - Item: Yellow_Herb
         Rate: 400
       - Item: Izidor
-        Rate: 5
+        Rate: 2
       - Item: Electric_Fist
         Rate: 10
       - Item: Harpy_Card
@@ -105089,6 +105144,8 @@ Body:
     AttackDelay: 1672
     AttackMotion: 672
     DamageMotion: 480
+    DamageTaken: 1
+    DamageTaken2: 50
     Class: Boss
     Modes:
       NoRandomWalk: true
