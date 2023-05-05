@@ -2664,6 +2664,16 @@ int status_calc_mob_(struct mob_data* md, uint8 opt)
 		else
 			md->level = md->db->lv;
 		md->damagetaken = md->db->damagetaken;
+		md->damagetaken1 = md->db->damagetaken1;
+		md->damagetaken2 = md->db->damagetaken2;
+		md->damagetaken3 = md->db->damagetaken3;
+		md->damagetaken4 = md->db->damagetaken4;
+		md->damagetaken5 = md->db->damagetaken5;
+		md->damagetaken6 = md->db->damagetaken6;
+		md->damagetaken7 = md->db->damagetaken7;
+		md->damagetaken8 = md->db->damagetaken8;
+		md->damagetaken9 = md->db->damagetaken9;
+		md->damagetaken10 = md->db->damagetaken10;
 	}
 
 	// Check if we need custom base-status
@@ -11133,6 +11143,20 @@ int status_change_start(struct block_list* src, struct block_list* bl,enum sc_ty
 			val2 = 10 * val1;
 			tick_time = status_get_sc_interval(type);
 			val4 = tick - tick_time; // Remaining time
+			break;
+		case SC_DAMAGE_HEAL:
+			switch( val1 ){
+				case 1:
+					val2 = BF_WEAPON;
+					break;
+				case 2:
+					val2 = BF_MAGIC;
+					break;
+				case 3:
+					//TODO: Absorb MISC damage? Both WEAPON & MAGIC damage? Which is correct on level 3?
+					val2 = BF_MISC;
+					break;
+			}
 			break;
 		case SC_BOSSMAPINFO:
 			if( sd != NULL ) {

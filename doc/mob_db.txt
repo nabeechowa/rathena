@@ -209,6 +209,16 @@ DamageMotion: Damage animation motion, same as aMotion but used to display the "
 ---------------------------------------
 
 DamageTaken: Rate at which the monster will recieve damage from players.
+DamageTaken1: Rate at which the monster will recieve damage from players.
+DamageTaken2: Rate at which the monster will recieve damage from players.
+DamageTaken3: Rate at which the monster will recieve damage from players.
+DamageTaken4: Rate at which the monster will recieve damage from players.
+DamageTaken5: Rate at which the monster will recieve damage from players.
+DamageTaken6: Rate at which the monster will recieve damage from players.
+DamageTaken7: Rate at which the monster will recieve damage from players.
+DamageTaken8: Rate at which the monster will recieve damage from players.
+DamageTaken9: Rate at which the monster will recieve damage from players.
+DamageTaken10: Rate at which the monster will recieve damage from players.
 
 ---------------------------------------
 

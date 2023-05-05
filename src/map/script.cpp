@@ -18759,6 +18759,16 @@ BUILDIN_FUNC(getunitdata)
 			getunitdata_sub(UMOB_RES, md->status.res);
 			getunitdata_sub(UMOB_MRES, md->status.mres);
 			getunitdata_sub(UMOB_DAMAGETAKEN, md->damagetaken);
+			getunitdata_sub(UMOB_DAMAGETAKEN1, md->damagetaken1);
+			getunitdata_sub(UMOB_DAMAGETAKEN2, md->damagetaken2);
+			getunitdata_sub(UMOB_DAMAGETAKEN3, md->damagetaken3);
+			getunitdata_sub(UMOB_DAMAGETAKEN4, md->damagetaken4);
+			getunitdata_sub(UMOB_DAMAGETAKEN5, md->damagetaken5);
+			getunitdata_sub(UMOB_DAMAGETAKEN6, md->damagetaken6);
+			getunitdata_sub(UMOB_DAMAGETAKEN7, md->damagetaken7);
+			getunitdata_sub(UMOB_DAMAGETAKEN8, md->damagetaken8);
+			getunitdata_sub(UMOB_DAMAGETAKEN9, md->damagetaken9);
+			getunitdata_sub(UMOB_DAMAGETAKEN10, md->damagetaken10);
 			getunitdata_sub(UMOB_DYNAMIC, md->dynamic); // [Start]
 			break;
 

@@ -1952,6 +1952,17 @@
 	export_constant(SC_GRADUAL_GRAVITY);
 	export_constant(SC_ALL_STAT_DOWN);
 	export_constant(SC_KILLING_AURA);
+	export_constant(SC_DAMAGE_HEAL);
+	export_constant(SC_IMMUNE_PROPERTY_NOTHING);
+	export_constant(SC_IMMUNE_PROPERTY_WATER);
+	export_constant(SC_IMMUNE_PROPERTY_GROUND);
+	export_constant(SC_IMMUNE_PROPERTY_FIRE);
+	export_constant(SC_IMMUNE_PROPERTY_WIND);
+	export_constant(SC_IMMUNE_PROPERTY_POISON);
+	export_constant(SC_IMMUNE_PROPERTY_SAINT);
+	export_constant(SC_IMMUNE_PROPERTY_DARKNESS);
+	export_constant(SC_IMMUNE_PROPERTY_TELEKINESIS);
+	export_constant(SC_IMMUNE_PROPERTY_UNDEAD);
 
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
@@ -4879,6 +4890,16 @@
 	export_constant(UMOB_RES);
 	export_constant(UMOB_MRES);
 	export_constant(UMOB_DAMAGETAKEN);
+	export_constant(UMOB_DAMAGETAKEN1);
+	export_constant(UMOB_DAMAGETAKEN2);
+	export_constant(UMOB_DAMAGETAKEN3);
+	export_constant(UMOB_DAMAGETAKEN4);
+	export_constant(UMOB_DAMAGETAKEN5);
+	export_constant(UMOB_DAMAGETAKEN6);
+	export_constant(UMOB_DAMAGETAKEN7);
+	export_constant(UMOB_DAMAGETAKEN8);
+	export_constant(UMOB_DAMAGETAKEN9);
+	export_constant(UMOB_DAMAGETAKEN10);
 	export_constant(UMOB_DYNAMIC); // [Start]
 
 	/* unit control - homunculus */

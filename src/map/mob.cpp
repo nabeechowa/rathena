@@ -4950,6 +4950,116 @@ uint64 MobDatabase::parseBodyNode(const ryml::NodeRef& node) {
 		if (!exists)
 			mob->damagetaken = 100;
 	}
+	if (this->nodeExists(node, "DamageTaken1")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken1", damage, 100))
+			return 0;
+
+		mob->damagetaken1 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken1 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken2")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken2", damage, 100))
+			return 0;
+
+		mob->damagetaken2 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken2 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken3")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken3", damage, 100))
+			return 0;
+
+		mob->damagetaken3 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken3 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken4")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken4", damage, 100))
+			return 0;
+
+		mob->damagetaken4 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken4 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken5")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken5", damage, 100))
+			return 0;
+
+		mob->damagetaken5 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken5 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken6")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken6", damage, 100))
+			return 0;
+
+		mob->damagetaken6 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken6 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken7")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken7", damage, 100))
+			return 0;
+
+		mob->damagetaken7 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken7 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken8")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken8", damage, 100))
+			return 0;
+
+		mob->damagetaken8 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken8 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken9")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken9", damage, 100))
+			return 0;
+
+		mob->damagetaken9 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken9 = 100;
+	}
+	if (this->nodeExists(node, "DamageTaken10")) {
+		uint16 damage;
+
+		if (!this->asUInt16Rate(node, "DamageTaken10", damage, 100))
+			return 0;
+
+		mob->damagetaken10 = damage;
+	} else {
+		if (!exists)
+			mob->damagetaken10 = 100;
+	}
 
 	if (this->nodeExists(node, "Ai")) {
 		std::string ai;

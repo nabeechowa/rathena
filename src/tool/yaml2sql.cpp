@@ -841,6 +841,26 @@ static bool mob_db_yaml2sql(const std::string &file, const std::string &table) {
 			column.append("`damage_motion`,");
 		if (appendEntry(input["DamageTaken"], value))
 			column.append("`damage_taken`,");
+		if (appendEntry(input["DamageTaken1"], value))
+			column.append("`damage_taken1`,");
+		if (appendEntry(input["DamageTaken2"], value))
+			column.append("`damage_taken2`,");
+		if (appendEntry(input["DamageTaken3"], value))
+			column.append("`damage_taken3`,");
+		if (appendEntry(input["DamageTaken4"], value))
+			column.append("`damage_taken4`,");
+		if (appendEntry(input["DamageTaken5"], value))
+			column.append("`damage_taken5`,");
+		if (appendEntry(input["DamageTaken6"], value))
+			column.append("`damage_taken6`,");
+		if (appendEntry(input["DamageTaken7"], value))
+			column.append("`damage_taken7`,");
+		if (appendEntry(input["DamageTaken8"], value))
+			column.append("`damage_taken8`,");
+		if (appendEntry(input["DamageTaken9"], value))
+			column.append("`damage_taken9`,");
+		if (appendEntry(input["DamageTaken10"], value))
+			column.append("`damage_taken10`,");
 		if (appendEntry(input["Ai"], value, true))
 			column.append("`ai`,");
 		if (appendEntry(input["Class"], value, true))

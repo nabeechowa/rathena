@@ -268,6 +268,16 @@ struct s_mob_db {
 	uint32 option;
 	std::vector<std::shared_ptr<s_mob_skill>> skill;
 	uint16 damagetaken;
+	uint16 damagetaken1;
+	uint16 damagetaken2;
+	uint16 damagetaken3;
+	uint16 damagetaken4;
+	uint16 damagetaken5;
+	uint16 damagetaken6;
+	uint16 damagetaken7;
+	uint16 damagetaken8;
+	uint16 damagetaken9;
+	uint16 damagetaken10;
 
 	e_mob_bosstype get_bosstype();
 };
@@ -382,6 +392,16 @@ struct mob_data {
 	 **/
 	int tomb_nid;
 	uint16 damagetaken;
+	uint16 damagetaken1;
+	uint16 damagetaken2;
+	uint16 damagetaken3;
+	uint16 damagetaken4;
+	uint16 damagetaken5;
+	uint16 damagetaken6;
+	uint16 damagetaken7;
+	uint16 damagetaken8;
+	uint16 damagetaken9;
+	uint16 damagetaken10;
 
 	int dynamic; // [Start]
 
